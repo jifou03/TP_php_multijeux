@@ -1,9 +1,9 @@
 <?php
 $menu_data = array (
     'Accueil' => 'index.php',
-    'Contact' => 'contact.php',
+    'jeux' => 'contact.php',
     'Inscription' => 'inscription.php',
-    'Dashboard' => 'dashboard.php'
+    'Mon profil' => 'dashboard.php'
 );
 ?>
 
