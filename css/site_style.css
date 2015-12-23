@@ -21,3 +21,10 @@
     background-color: #0e9aff;
     width: 100%;
 }
+
+li {
+    display:inline-block;
+    list-style:none;
+    width:23%;
+    text-align:center;
+}
