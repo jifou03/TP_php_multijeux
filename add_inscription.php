@@ -1,7 +1,5 @@
 <?php
 
-
-
    /*$nomutilisateur = $_POST['nomutilisateur'];
     $password = $_POST['password'];
     $prenom = $_POST['prenom'];
