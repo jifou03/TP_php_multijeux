@@ -1,16 +1,13 @@
 <?php
 require_once '_defines.php';
+require_once 'data/_main_data.php';
+$site_data[PAGE_ID] = 'index';
+require_once 'view_parts/_page_base.php';
+require_once 'view_parts/_header.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-    <h1>$Title$</h1>
-    <?php
 
-    ?>
-</body>
-</html>
+<div id="main"></div>
+
+<?php
+require_once 'view_parts/_page_bottom.php';
+?>

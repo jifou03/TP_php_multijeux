@@ -1,7 +1,9 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: J-F Grenier
- * Date: 2015-12-21
- * Time: 23:57
- */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title><?= SITE_NAME . ' - ' . ucfirst($site_data[PAGE_ID]) ?></title>
+    <link rel="stylesheet" type="text/css" href="../css/site_style.css">
+</head>
+<body>
+<div id="wrapper">
