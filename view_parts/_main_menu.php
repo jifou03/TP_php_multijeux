@@ -3,6 +3,7 @@ $menu_data = array (
     'Accueil' => 'index.php',
     'jeux' => 'contact.php',
     'Inscription' => 'inscription.php',
+    'Bibliothèque' =>'bibliotheque.php',
     'Mon profil' => 'dashboard.php'
 );
 ?>
