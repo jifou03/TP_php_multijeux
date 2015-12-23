@@ -1,16 +1,17 @@
 <?php
 $menu_data = array (
     'Accueil' => 'index.php',
-    'Connection' => 'connection.php',
+    'jeux' => 'contact.php',
     'Inscription' => 'inscription.php',
-    'Dashboard' => 'dashboard.php'
+    'Bibliothèque' =>'bibliotheque.php',
+    'Mon profil' => 'dashboard.php'
 );
 ?>
 
 <ul>
     <?php
     foreach ($menu_data as $menu => $menu_url) {
-        echo "<li class='menu'><a href='".$menu_url."'>$menu</a></li>";
+        echo "<li class='main_menu'><a href='".$menu_url."'>$menu</a></li>";
     }
     ?>
 </ul>

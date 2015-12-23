@@ -1,6 +1,7 @@
 #header img{
     margin-left: 2%;
     width:15%;
+    position: relative;
 }
 #header h2{
     display: inline-block;
@@ -22,11 +23,12 @@
     width: 100%;
 }
 
-.menu {
+li.main_menu {
     display:inline-block;
     list-style:none;
     width:23%;
     text-align:center;
+    position: relative;
 }
 
 li {
@@ -37,4 +39,3 @@ li {
     display:inline-block;
     width:140px;
 }
-
