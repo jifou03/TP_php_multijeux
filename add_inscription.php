@@ -6,7 +6,7 @@
 
     $db_selected = mysqli_select_db($link, 'multijeux') or die ("Couldn't connect AGAIN");
 
-    $query = "INSERT INTO users  VALUES ('Nickerson')";
+    $query = "INSERT INTO users VALUES ('Nickerson')";
 
     mysqli_query($link, $query);
 
