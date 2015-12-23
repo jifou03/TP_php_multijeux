@@ -12,7 +12,7 @@ $site_data[PAGE_ID] = 'bibliotheque'
             width:25%;
             display: inline-block;
             height: 200px;
-            /*border: 1px solid black;*/
+
             margin: 40px;
 
         }
