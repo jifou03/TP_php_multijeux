@@ -22,9 +22,19 @@
     width: 100%;
 }
 
-li {
+#menu {
     display:inline-block;
     list-style:none;
     width:23%;
     text-align:center;
 }
+
+li {
+    list-style:none;
+}
+
+.inscription {
+    display:inline-block;
+    width:140px;
+}
+
