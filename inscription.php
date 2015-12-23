@@ -18,9 +18,9 @@ require_once 'view_parts/_page_base.php';
             <input type="text" name="courriel" id="courriel"/></li>
         <li><label for="sexe">Sexe :</label>
             <label for="garcon">Garçon :</label>
-            <input type="radio" name="sexe" id="garcon"/>
+            <input type="radio" name="sexe" id="garcon" value="Garcon"/>
             <label for="fille">Fille :</label>
-            <input type="radio" name="sexe" id="fille"/></li>
+            <input type="radio" name="sexe" id="fille" value="Fille"/></li>
         <li><input type="submit" id="submit" name="submit" value="Soumettre"/></li>
     </ul>
 </form>

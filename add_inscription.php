@@ -1,23 +1,30 @@
 <?php
 
-/*$name = $_POST['nom'];
+    $nomutilisateur = $_POST['nomutilisateur'];
+    $password = $_POST['password'];
+    $prenom = $_POST['prenom'];
+    $nom = $_POST['nom'];
+    $courriel = $_POST['courriel'];
+    $sexe = $_POST['sexe'];
 
-$link = mysqli_connect("localhost", "root", "") or die("Couldn't connect wtf");
+    if ($sexe == 'garcon') {
+        $sexe = 'garcon';
+    } else if ($sexe == 'fille') {
+        $sexe = 'fille';
+    }
 
-$db_selected = mysqli_select_db($link, 'multijeux') or die ("Couldn't connect AGAIN");
 
-$query = "INSERT INTO users VALUES ('Nickerson')";
+    $link = mysqli_connect("localhost", "root", "") or die("Couldn't connect wtf");
 
-mysqli_query($link, $query);
+    mysqli_select_db($link, 'multijeux') or die ("Couldn't connect AGAIN");
 
-$query = "SELECT * FROM users";
+    $query = "INSERT INTO users (username, password, prenom, nom, courriel, sexe)
+    VALUES ('$nomutilisateur', '$password', '$prenom', '$nom', '$courriel', '$sexe')";
 
-if ($result = mysqli_query($link, $query)) {
-    $row = mysqli_fetch_array($result);
-    print_r($row);
-}*/
-$bdd = new PDO('mysql:host=localhost;dbname=users;charset=utf8', 'root', '');
-$req = $bdd->prepare('INSERT INTO users(username,password,prenom,nom,courriel,sexe')
-VALUES ([$_POST(nomutilisateur)],[$_POST(password)],[$_POST(prenom)],[$_POST(nom)],[$_POST(courriel)],[$_POST(sexe)]);
+    mysqli_query($link, $query);
+
+
+header('Location: http://localhost/tp_php_multijeux/index.php');
+
 ?>
 
