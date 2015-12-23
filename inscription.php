@@ -3,6 +3,7 @@ require_once '_defines.php';
 $site_data[PAGE_ID] = 'inscription';
 require_once 'view_parts/_page_base.php';
 ?>
+
 <h1><?= ucfirst($site_data[PAGE_ID]); ?></h1>
 <form action="add_inscription.php" method="post">
     <ul>
