@@ -1,6 +1,5 @@
 <?php
 require_once '_defines.php';
-$site_data[PAGE_ID] = 'inscription'
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,6 +11,7 @@ $site_data[PAGE_ID] = 'inscription'
 <body>
 <h1>$Title$</h1>
 <form action="add_inscription.php" method="post">
+
 <ul>
     <li><label class="inscription" for="nom">Nom :</label>
         <input type="text" name="nom" id="nom"/></li>
@@ -25,10 +25,10 @@ $site_data[PAGE_ID] = 'inscription'
         <input type="text" name="courriel" id="courriel"/></li>
     <li><label for="sexe">Sexe :</label>
         <label for="garcon">Garçon :</label>
-        <input type="radio" name="sexe" id="garcon"/>
+        <input type="radio" name="sexe" id="garcon" value="garcon"/>
         <label for="fille">Fille :</label>
-        <input type="radio" name="sexe" id="fille"/></li>
-    <input type="submit" id="submit" name="submit" value="Soumettre"/>
+        <input type="radio" name="sexe" id="fille" value="fille"/></li>
+    <li><input type="submit" id="submit" name="submit" value="Soumettre"/></li>
 </ul>
 </form>
 </body>

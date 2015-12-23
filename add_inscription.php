@@ -27,5 +27,3 @@
     //header('Location: http://localhost/tp_php_multijeux/index.php');
 
 ?>
-
-
