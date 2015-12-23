@@ -23,10 +23,19 @@
     width: 100%;
 }
 
-li {
+li.main_menu {
     display:inline-block;
     list-style:none;
     width:23%;
     text-align:center;
     position: relative;
+}
+
+li {
+    list-style:none;
+}
+
+.inscription {
+    display:inline-block;
+    width:140px;
 }
