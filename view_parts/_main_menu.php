@@ -1,7 +1,7 @@
 <?php
 $menu_data = array (
     'Accueil' => 'index.php',
-    'Contact' => 'contact.php',
+    'Connection' => 'connection.php',
     'Inscription' => 'inscription.php',
     'Dashboard' => 'dashboard.php'
 );
@@ -10,7 +10,7 @@ $menu_data = array (
 <ul>
     <?php
     foreach ($menu_data as $menu => $menu_url) {
-        echo "<li id='menu'><a href='".$menu_url."'>$menu</a></li>";
+        echo "<li class='menu'><a href='".$menu_url."'>$menu</a></li>";
     }
     ?>
 </ul>

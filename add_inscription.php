@@ -1,21 +1,23 @@
 <?php
 
-    $name = $_POST['nom'];
+    $nomutilisateur = $_POST['nomutilisateur'];
+    $password = $_POST['password'];
+    $prenom = $_POST['prenom'];
+    $nom = $_POST['nom'];
+    $courriel = $_POST['courriel'];
+    $sexe = $_POST['sexe'];
+
 
     $link = mysqli_connect("localhost", "root", "") or die("Couldn't connect wtf");
 
     $db_selected = mysqli_select_db($link, 'multijeux') or die ("Couldn't connect AGAIN");
 
-    $query = "INSERT INTO users VALUES ('Nickerson')";
+    $query = "INSERT INTO users (username, password, prenom, nom, courriel, sexe)
+    VALUES ('$nomutilisateur', '$password', '$prenom', '$nom', '$courriel', '$sexe')";
 
     mysqli_query($link, $query);
 
-    $query = "SELECT * FROM users";
 
-    if ($result = mysqli_query($link, $query)) {
-        $row = mysqli_fetch_array($result);
-        print_r($row);
-    }
 ?>
 
 

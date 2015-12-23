@@ -1,17 +1,12 @@
 <?php
 require_once '_defines.php';
-$site_data[PAGE_ID] = 'connection'
+require_once 'data/_main_data.php';
+$site_data[PAGE_ID] = 'connection';
+require_once 'view_parts/_page_base.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Connection</title>
-</head>
-<body>
-<h1>$Title$</h1>
+<link rel="stylesheet" type="text/css" href="css/site_style.css"/>
 <?php
-
+require_once 'view_parts/_page_bottom.php';
 ?>
 </body>
 </html>

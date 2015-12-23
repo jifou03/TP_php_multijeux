@@ -7,4 +7,5 @@
 </head>
 <body>
 <div id="wrapper">
+<?php require_once '_header.php'; ?>
 <?php require_once '_main_menu.php'; ?>
