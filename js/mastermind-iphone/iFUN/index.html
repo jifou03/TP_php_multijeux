@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+	<head>
+		<title>Le Mastermind en Javascript</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<meta name="generator" content="Geany 0.18" />
+		<link rel="stylesheet" media="screen" type="text/css" title="Design mastermind" href="css/design.css" />
+		<script charset="utf-8" src="javascript/controleur.js" type="text/javascript"></script>
+	</head>
+
+	<body>
+	<div id="iphone">
+		<div id="entete"><h1>iFun Mastermind</h1></div>
+		<div id="corps">
+			<table id="grille"> 
+				<tr>
+					<td><img id="patch10" src="image/patch.png" alt="Patch de coordonnées 10" /></td>
+					<td><img id="patch11" src="image/patch.png" alt="Patch de coordonnées 11" /></td>
+					<td><img id="patch12" src="image/patch.png" alt="Patch de coordonnées 12" /></td>
+					<td><img id="patch13" src="image/patch.png" alt="Patch de coordonnées 13" /></td>
+					<td>&nbsp;</td>
+					<td><img id="carre100" src="image/absent.gif" alt="Carré de coordonnées 100" /></td>
+					<td><img id="carre101" src="image/absent.gif" alt="Carré de coordonnées 101" /></td>
+					<td><img id="carre102" src="image/absent.gif" alt="Carré de coordonnées 102" /></td>
+					<td><img id="carre103" src="image/absent.gif" alt="Carré de coordonnées 103" /></td>
+				</tr>
+				<tr>
+					<td><img id="patch20" src="image/patch.png" alt="Patch de coordonnées 20" /></td>
+					<td><img id="patch21" src="image/patch.png" alt="Patch de coordonnées 21" /></td>
+					<td><img id="patch22" src="image/patch.png" alt="Patch de coordonnées 22" /></td>
+					<td><img id="patch23" src="image/patch.png" alt="Patch de coordonnées 23" /></td>
+					<td>&nbsp;</td>
+					<td><img id="carre200" src="image/absent.gif" alt="Carré de coordonnées 200" /></td>
+					<td><img id="carre201" src="image/absent.gif" alt="Carré de coordonnées 201" /></td>
+					<td><img id="carre202" src="image/absent.gif" alt="Carré de coordonnées 202" /></td>
+					<td><img id="carre203" src="image/absent.gif" alt="Carré de coordonnées 203" /></td>
+				</tr>
+				<tr>
+					<td><img id="patch30" src="image/patch.png" alt="Patch de coordonnées 30" /></td>
+					<td><img id="patch31" src="image/patch.png" alt="Patch de coordonnées 31" /></td>
+					<td><img id="patch32" src="image/patch.png" alt="Patch de coordonnées 32" /></td>
+					<td><img id="patch33" src="image/patch.png" alt="Patch de coordonnées 33" /></td>
+					<td>&nbsp;</td>
+					<td><img id="carre300" src="image/absent.gif" alt="Carré de coordonnées 300" /></td>
+					<td><img id="carre301" src="image/absent.gif" alt="Carré de coordonnées 301" /></td>
+					<td><img id="carre302" src="image/absent.gif" alt="Carré de coordonnées 302" /></td>
+					<td><img id="carre303" src="image/absent.gif" alt="Carré de coordonnées 303" /></td>
+				</tr>
+				<tr>
+					<td><img id="patch40" src="image/patch.png" alt="Patch de coordonnées 40" /></td>
+					<td><img id="patch41" src="image/patch.png" alt="Patch de coordonnées 41" /></td>
+					<td><img id="patch42" src="image/patch.png" alt="Patch de coordonnées 42" /></td>
+					<td><img id="patch43" src="image/patch.png" alt="Patch de coordonnées 43" /></td>
+					<td>&nbsp;</td>
+					<td><img id="carre400" src="image/absent.gif" alt="Carré de coordonnées 400" /></td>
+					<td><img id="carre401" src="image/absent.gif" alt="Carré de coordonnées 401" /></td>
+					<td><img id="carre402" src="image/absent.gif" alt="Carré de coordonnées 402" /></td>
+					<td><img id="carre403" src="image/absent.gif" alt="Carré de coordonnées 403" /></td>
+				</tr>
+				<tr>
+					<td><img id="patch50" src="image/patch.png" alt="Patch de coordonnées 50" /></td>
+					<td><img id="patch51" src="image/patch.png" alt="Patch de coordonnées 51" /></td>
+					<td><img id="patch52" src="image/patch.png" alt="Patch de coordonnées 52" /></td>
+					<td><img id="patch53" src="image/patch.png" alt="Patch de coordonnées 53" /></td>
+					<td>&nbsp;</td>
+					<td><img id="carre500" src="image/absent.gif" alt="Carré de coordonnées 500" /></td>
+					<td><img id="carre501" src="image/absent.gif" alt="Carré de coordonnées 501" /></td>
+					<td><img id="carre502" src="image/absent.gif" alt="Carré de coordonnées 502" /></td>
+					<td><img id="carre503" src="image/absent.gif" alt="Carré de coordonnées 503" /></td>
+				</tr>
+				<tr>
+					<td><img id="patch60" src="image/patch.png" alt="Patch de coordonnées 60" /></td>
+					<td><img id="patch61" src="image/patch.png" alt="Patch de coordonnées 61" /></td>
+					<td><img id="patch62" src="image/patch.png" alt="Patch de coordonnées 62" /></td>
+					<td><img id="patch63" src="image/patch.png" alt="Patch de coordonnées 63" /></td>
+					<td>&nbsp;</td>
+					<td><img id="carre600" src="image/absent.gif" alt="Carré de coordonnées 600" /></td>
+					<td><img id="carre601" src="image/absent.gif" alt="Carré de coordonnées 601" /></td>
+					<td><img id="carre602" src="image/absent.gif" alt="Carré de coordonnées 602" /></td>
+					<td><img id="carre603" src="image/absent.gif" alt="Carré de coordonnées 603" /></td>
+				</tr>
+				<tr>
+					<td><img id="patch70" src="image/patch.png" alt="Patch de coordonnées 70" /></td>
+					<td><img id="patch71" src="image/patch.png" alt="Patch de coordonnées 71" /></td>
+					<td><img id="patch72" src="image/patch.png" alt="Patch de coordonnées 72" /></td>
+					<td><img id="patch73" src="image/patch.png" alt="Patch de coordonnées 73" /></td>
+					<td>&nbsp;</td>
+					<td><img id="carre700" src="image/absent.gif" alt="Carré de coordonnées 700" /></td>
+					<td><img id="carre701" src="image/absent.gif" alt="Carré de coordonnées 701" /></td>
+					<td><img id="carre702" src="image/absent.gif" alt="Carré de coordonnées 702" /></td>
+					<td><img id="carre703" src="image/absent.gif" alt="Carré de coordonnées 703" /></td>
+				</tr>
+				<tr>
+					<td><img id="patch80" src="image/patch.png" alt="Patch de coordonnées 80" /></td>
+					<td><img id="patch81" src="image/patch.png" alt="Patch de coordonnées 81" /></td>
+					<td><img id="patch82" src="image/patch.png" alt="Patch de coordonnées 82" /></td>
+					<td><img id="patch83" src="image/patch.png" alt="Patch de coordonnées 83" /></td>
+					<td>&nbsp;</td>
+					<td><img id="carre800" src="image/absent.gif" alt="Carré de coordonnées 800" /></td>
+					<td><img id="carre801" src="image/absent.gif" alt="Carré de coordonnées 801" /></td>
+					<td><img id="carre802" src="image/absent.gif" alt="Carré de coordonnées 802" /></td>
+					<td><img id="carre803" src="image/absent.gif" alt="Carré de coordonnées 803" /></td>
+				</tr>
+			</table>
+		</div>
+		<div id="menu">	
+			<p>
+				<a href="javascript:aide();" title="Accéder à l'aide">
+				<span class="color">( aide )</span></a>
+				<a href="javascript:afficher_sol()" title="Dévoiler la solution">
+				<span class="color">( solution )</span></a>
+				<a href="javascript:effacerligne();" title="Effacer la proposition">
+				<span class="nocolor">( effacer )</span></a>
+				<a href="javascript:compar();" title="Soumettre la proposition">
+				<span class="nocolor">( soumettre )</span></a>
+			</p>
+		</div>	
+		<div id="pied">
+			<table id="panel">
+				<tr>
+					<td><a href="javascript:placercouleurs(0);"><img src="image/patchvert.gif" alt="Patch vert" /></a></td>
+					<td><a href="javascript:placercouleurs(1);"><img src="image/patchbleu.gif" alt="Patch bleu" /></a></td>
+					<td><a href="javascript:placercouleurs(2);"><img src="image/patchciel.gif" alt="Patch ciel" /></a></td>
+					<td><a href="javascript:placercouleurs(3);"><img src="image/patchjaune.gif" alt="Patch jaune" /></a></td>
+					<td><a href="javascript:placercouleurs(4);"><img src="image/patchmauve.gif" alt="Patch mauve" /></a></td>
+					<td><a href="javascript:placercouleurs(5);"><img src="image/patchrouge.gif" alt="Patch rouge" /></a></td>
+				</tr>
+			</table>
+			<table id="solution">
+				<tr>
+					<td><img id="solution0" src="image/patch.png" alt="Patch solution 0" /></td>
+					<td><img id="solution1" src="image/patch.png" alt="Patch solution 1" /></td>
+					<td><img id="solution2" src="image/patch.png" alt="Patch solution 2" /></td>
+					<td><img id="solution3" src="image/patch.png" alt="Patch solution 3" /></td>
+				</tr>
+			</table>
+			<form method="post" action="javascript:nvelle_partie();">
+				<p><input type="submit" value="Nouvelle Partie" /></p>
+			</form>
+		</div>
+	</div>
+
+</body>
+
+</html>

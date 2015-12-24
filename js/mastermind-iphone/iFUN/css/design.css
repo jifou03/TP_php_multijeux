@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+body
+{
+	background-color: #464954;
+	font-family: arial, sans-serif;
+	margin: 10px;
+}
+
+div#iphone
+{
+	width: 375px;
+	height: 696px;
+	background: url("../image/iphone.gif") top left no-repeat;
+	
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div#entete
+{
+	height: 120px;
+}
+
+div#corps
+{
+	height: 300px;
+	padding-top: 10px;
+	margin-bottom: 0;
+}
+
+div#menu
+{
+	height: 56px;
+}
+
+div#pied
+{
+	height: 79px;
+	padding-top: 6px;
+}
+
+h1
+{
+	padding-top: 40px;
+	padding-bottom: auto;
+	text-align: center;
+	color: white;
+	font-size: large;
+}
+
+p
+{
+	font-size: 0.9em;
+	text-align: center;
+	margin: 0;
+	padding-top: 10px;
+}
+
+table
+{
+	border-collapse: collapse;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table#grille
+{
+	
+}
+
+table#panel
+{
+	background-color: black;
+}
+
+table#solution
+{
+	display: none;
+	background-color: black;
+}
+
+#panel img
+{
+	border-style: none;
+}
+
+a:link
+{
+	text-decoration: none;
+}
+
+a:link .color
+{
+	color: yellow;
+}
+
+a:link .nocolor
+{
+	color: white;
+}
+
+a:hover 
+{
+	text-decoration: underline;
+}
+
+a:hover .color
+{
+	text-decoration: underline;
+	color: yellow;
+}
+
+a:hover .nocolor
+{
+	text-decoration: underline;
+	color: white;
+}
+

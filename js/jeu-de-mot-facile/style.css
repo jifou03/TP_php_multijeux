@@ -1,0 +1,61 @@
+body {
+font-family : Verdana,Aial,Helvetica,geneva, Sans-serif;
+position: relative;
+font-size: 14px;
+margin : 0px;
+padding: 0px;
+ background-image: url(rim.jpg);
+background-repeat: no-repeat;
+background-position: center;
+}
+
+div#retour{
+text-align:center;
+position: relative;
+
+left: 5px;
+top: 0px;
+ 
+}
+
+div#retour1{
+text-align:center;
+position: relative;
+
+left: 5px;
+top: 0px;
+ 
+}
+
+
+div#retour2{
+text-align:center;
+position: relative;
+
+left: 5px;
+top: 0px;
+ 
+}
+
+
+div#retour3{
+text-align:center;
+position: relative;
+
+left: 5px;
+top: 0px;
+ 
+}
+
+
+div#retourpoint{
+text-align:center;
+position: absolute;
+
+left: 160px;
+top: 5px;
+ 
+}
+
+
+
