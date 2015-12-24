@@ -6,11 +6,11 @@ require_once 'view_parts/_page_base.php'
 
 <h1><?= ucfirst($site_data[PAGE_ID]); ?></h1>
 
-<h2>Veuillez vous indentifier</h2>
+<h2>Veuillez vous identifier</h2>
 <form>
-    <label for="username">username</label>
+    <label for="username">Nom de l'utilisateur: </label>
     <input type="text" id="username" name="username">
-    <label for="password">username</label>
+    <label for="password">Mot de passe: </label>
     <input type="text" id="password" name="password">
 
 
