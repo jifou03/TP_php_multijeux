@@ -1,7 +1,7 @@
 <?php
 
     $nomutilisateur = $_POST['nomutilisateur'];
-    $password = $_POST['password'];
+    $password = sha1($_POST['password']);
     $prenom = $_POST['prenom'];
     $nom = $_POST['nom'];
     $courriel = $_POST['courriel'];
