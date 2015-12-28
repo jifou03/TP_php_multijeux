@@ -22,5 +22,11 @@ require_once 'view_parts/_main_menu.php';
         MACHINE A SOUS</a></p>
 <p class="biblio"><a href="js/mastermind-iphone/iFUN/index.html"><img src="js/mastermind-iphone/mastermind.PNG" alt="image indisponible"/>
         MASTERMIND</a></p>
+
+<p class="biblio"><a href="bibliotheque/labyrinthe.php"><img src="js/labyrinthe/labyrinthe/labyrinthe.PNG" alt="image indisponible"/>
+        LABYRINTHE</a></p>
+
+<p class="biblio"><a href="bibliotheque/moby-bros.php"><img src="js/moby-bros-l-aventurier-des-etoiles/moby.PNG" alt="image indisponible"/>
+        MOBY BROS</a></p>
 </body>
 </html>
