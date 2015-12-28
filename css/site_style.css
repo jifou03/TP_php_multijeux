@@ -26,9 +26,13 @@
 li.main_menu {
     display:inline-block;
     list-style:none;
-    width:23%;
+    width:15%;
     text-align:center;
     position: relative;
+}
+ul{
+    margin: 0 auto;
+    text-align: center;
 }
 
 li {
@@ -38,4 +42,18 @@ li {
 .inscription {
     display:inline-block;
     width:140px;
+}
+
+.biblio {
+    width:25%;
+    display: inline-block;
+    height: 200px;
+    /* border: 1px solid black;*/
+    margin: 40px;
+
+}
+.biblio  img{
+    width:377px;
+    height: 300px;
+    border: 1px solid black;
 }
