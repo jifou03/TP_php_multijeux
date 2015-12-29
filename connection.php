@@ -10,13 +10,13 @@ require_once 'view_parts/_main_menu.php';
 
 <h2>Veuillez vous identifier</h2>
 <form action="test_connect.php" method="post">
-    <label for="username">Nom de l'utilisateur: </label>
-    <input type="text" id="username" name="username">
-    <label for="password">Mot de passe: </label>
-    <input type="password" id="password" name="password">
-    <label for="cookie">connection automatique: </label>
-    <input type="checkbox" id="cookie" name="cookie">
-    <input type="submit" id="submit" name="submit" value="Soumettre"/>
+    <p><label for="username">Nom de l'utilisateur: </label>
+    <input type="text" id="username" name="username"></p>
+    <p><label for="password">Mot de passe: </label>
+    <input type="password" id="password" name="password"></p>
+    <p><label for="cookie">connection automatique: </label>
+    <input type="checkbox" id="cookie" name="cookie"></p>
+    <p><input type="submit" id="submit" name="submit" value="Soumettre"/></p>
 </form>
 <?php
 require_once 'view_parts/_page_bottom.php';
