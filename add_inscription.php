@@ -14,7 +14,7 @@
     }
 
 
-    $link = mysqli_connect("localhost", "root", "") or die("Couldn't connect wtf");
+    $link = mysqli_connect("localhost", "root", "") or die("Couldn't connect");
 
     mysqli_select_db($link, 'multijeux') or die ("Couldn't connect AGAIN");
 

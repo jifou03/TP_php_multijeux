@@ -1,0 +1,67 @@
+<HTML>
+<HEAD><TITLE>Lovetrucator by AFMika</TITLE>
+<SCRIPT language="javascript">
+	/*Script programmé par AF Michaël veuillez me contacter sur sasarymika3@gmail.com
+	avant la modification ou le partage de ce code source ou si vous désirez l'améliorer
+	dites-le moi pour que je puisse voir mes erreurs
+	[abs(cos(jj1+jj3)+sin(mm1+mm2))]*100=Pourcentage*/
+function love(){
+ var vjour = document.formulaire.vjour.value
+ var sjour = document.formulaire.sjour.value
+ var vmois = document.formulaire.vmois.value
+ var smois = document.formulaire.smois.value
+//conversion de radian en degré
+ var sommejours = vjour+sjour
+ var sommemois = vmois+smois
+ var rad_vjour = ((sommejours)*Math.PI)/180
+ var rad_vmois = ((sommemois)*Math.PI)/180
+//Utilisation de la trigonométrie pour enlever le problème de proportionnalité
+jx = Math.cos(rad_vjour)
+/*plus l'angle est grand(=62deg) plus cos(angle) très petit  , 
+	donc ***max(jx)= cos  (2jours=2dg=0.03rd)***
+	et  	***min(jx)=cos(64jours=62dg=1.04rd)***/
+
+mx = Math.sin(rad_vmois) 
+/*plus l'angle est grand plus sin(angle) très grand, 
+	donc  ***max(mx)=sin(12mois=2dg=0.54rd)*** 
+	et 		 ***min(mx)=sin(2mois=2dg=0.03rd)*** */
+
+sx = Math.abs(jx + mx) /* max(sx)=max(jx)+max(mx)=cos(2dg=0.03rd)+sin(12dg=0.54rd)=1.207302518
+										min(sx)=min(jx)+min(mx)=cos(62dg=1.08rd)+sin(2dg=0.03rd)= 0.50437105*/
+expr = 100*sx
+if (expr>100){
+	alert("ho la la quelle chance +99%")
+	}
+if (expr<100){
+	alert("le résultat est de R={"+expr+" %} pour ces deux dates"+vjour+"/"+vmois+" et "+sjour+"/"+smois)
+	}
+}
+</SCRIPT>
+</head>
+<body>
+<link href="background.css" rel="stylesheet" type="text/css">
+<center>
+<img src="imagelv/couverture.jpg">
+<font FACE="Arial" SIZE='3' COLOR="blue">
+<pre>Petit Love-calculator(-trucator xD) facile à comprendre</pre>
+<pre>Indiquer votre jour/mois de naissance Et celui du partenaire</pre>
+<pre>Ce n'est qu'un jeu okayy!!!???</pre> 
+<pre>Amusez-vous ou pas!!! hahaha</pre>
+</font>
+<h2><font FACE="Arial" SIZE='4' COLOR="green">
+<form name="formulaire" action="">
+<pre>Votre jour de naissance(1~31)   <input type="text" name="vjour" size="4"></pre>
+<pre>Votre mois de naissance(1~12)   <input type="text" name="vmois" size="4"></pre>
+<img src="imagelv/kawaiii.jpg">
+<pre>Son jour de naissance(1~31)     <input type="text" name="sjour" size="4"></pre>
+<pre>Son mois de naissance(1~12)     <input type ="text" name="smois" size="4"></pre>
+</font>
+<input type="button" value="Calculer" onClick="love()">
+<pre><font FACE="tahoma" SIZE='1' COLOR="red"><a href="http://www.facebook.com/fitiavana.michael">Mon lien vers facebook</a></font></pre>
+<pre>sasarymika3@gmail.com</pre>
+</center>
+</form>
+</body>
+</html>
+
+
