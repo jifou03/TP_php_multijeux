@@ -29,7 +29,28 @@ li.main_menu {
     width:15%;
     text-align:center;
     position: relative;
+    color: white;
+    text-decoration: none;
+
 }
+
+a:visited{
+    color: #e30613;
+    list-style: none;
+    text-decoration: none;
+}
+a:hover{
+    color: #f8ea19;
+    list-style: none;
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+
+}
+
+
 ul{
     margin: 0 auto;
     text-align: center;
@@ -37,6 +58,9 @@ ul{
 
 li {
     list-style:none;
+    text-decoration: none;
+
+
 }
 
 .inscription {
