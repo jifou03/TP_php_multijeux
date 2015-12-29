@@ -14,6 +14,8 @@ require_once 'view_parts/_main_menu.php';
     <input type="text" id="username" name="username">
     <label for="password">Mot de passe: </label>
     <input type="password" id="password" name="password">
+    <label for="cookie">connection automatique: </label>
+    <input type="checkbox" id="cookie" name="cookie">
     <input type="submit" id="submit" name="submit" value="Soumettre"/>
 </form>
 <?php
