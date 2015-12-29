@@ -63,20 +63,19 @@
 </head>
 <body>
 
-<a href="../js/mastermind-iphone/iFUN/index.html" class="lien_image">
-    <img src="../js/mastermind-iphone/mastermind.PNG" alt="image indisponible"/>
+<a href="../js/love-trucator/Lvcalculator%20by%20mika-------------------/love%20calc%20by%20mika.html" class="lien_image">
+    <img src="../js/love-trucator/Lvcalculator%20by%20mika-------------------/imagelv/love.PNG" alt="image indisponible"/>
 </a>
 
 <p class="description_jeux">
-    Le but du Mastermind est de découvrir en moins de 10 essais une combinaison de 4 billes de couleurs différentes.A
-    chaque essai, le joueur reçoit des indications sur les couleurs et les emplacements qu’il a choisis.
-    Le joueur gagne cette manche s'il donne la bonne combinaison de pions sur la dernière rangée ou avant.
+    Le principe du jeu est simple : il suffit de sauter d'un niveau à l'autre afin d'atteindre le panneau FINISH.Attention
+    à ne pas tomber et a éviter tout en les crocodiles placés sur le chemin.Pour cela utiliser les touches 4,8,6 pour
+    respectivement aller à gauche,sauter et aller à droite.
+ </p>
 
-</p>
+<p class="jouer"><a href="../js/love-trucator/Lvcalculator%20by%20mika-------------------/love%20calc%20by%20mika.html">JOUER</a></p>
 
-<p class="jouer"><a href="../js/mastermind-iphone/iFUN/index.html"> JOUER </a></p>
-
-<p class="titre_jeux">MASTERMIND</p>
+<p class="titre_jeux">LOVE CALCULATOR</p>
 
 
 <?php ?>

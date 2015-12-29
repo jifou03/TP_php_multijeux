@@ -76,7 +76,7 @@
 
 <p class="jouer"><a href="../js/machine-a-sous/casino/machine.htm">JOUER</a></p>
 
-<p class="titre_jeux">MACHINE A SOUS</p>
+<p class="titre_jeux"> MACHINE A SOUS </p>
 
 
 <?php ?>

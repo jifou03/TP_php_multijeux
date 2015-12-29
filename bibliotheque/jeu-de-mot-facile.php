@@ -68,10 +68,8 @@
 </a>
 
 <p class="description_jeux">
-    Le principe du jeu est simple : il suffit de rebondir de plate-forme en plate-forme avec l'interdiction de redescendre
-    plus bas. Plus on arrive haut, plus le score augmente, et plus les choses se corsent, aussi. La maniabilité de la
-    bestiole que l'on incarne est d'une précision redoutable, ce qui fait la grande force du jeu et lui permet d'offrir
-    une grosse marge de progression.
+    Le principe du jeu est simple : il suffit de deviner un mot à l'aide des indices qui vous sont donnés. Plus vous
+    trouver de mots et plus vous avez de points. C'est génial !!!!!
  </p>
 
 <p class="jouer"><a href="../js/jeu-de-mot-facile/jsdico.html">JOUER</a></p>

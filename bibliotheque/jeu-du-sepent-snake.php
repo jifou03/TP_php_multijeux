@@ -68,10 +68,9 @@
 </a>
 
 <p class="description_jeux">
-    Le principe du jeu est simple : il suffit de rebondir de plate-forme en plate-forme avec l'interdiction de redescendre
-    plus bas. Plus on arrive haut, plus le score augmente, et plus les choses se corsent, aussi. La maniabilité de la
-    bestiole que l'on incarne est d'une précision redoutable, ce qui fait la grande force du jeu et lui permet d'offrir
-    une grosse marge de progression.
+    Le joueur dirige un serpent qui avance inlassablement dans une cage. Il s'allonge chaque fois qu'il mange et gagne
+    des points par la meme occasion. S'il se mord la queue ,il meurt et la partie s'achève.
+
  </p>
 
 <p class="jouer"><a href="../js/jeux-du-serpent-snake/serpent/serpent%20html/serpent%20html.html">JOUER</a></p>

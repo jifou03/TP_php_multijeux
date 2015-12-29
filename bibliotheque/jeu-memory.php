@@ -68,10 +68,11 @@
 </a>
 
 <p class="description_jeux">
-    Le principe du jeu est simple : il suffit de rebondir de plate-forme en plate-forme avec l'interdiction de redescendre
-    plus bas. Plus on arrive haut, plus le score augmente, et plus les choses se corsent, aussi. La maniabilité de la
-    bestiole que l'on incarne est d'une précision redoutable, ce qui fait la grande force du jeu et lui permet d'offrir
-    une grosse marge de progression.
+    Le jeu se compose de paires de cartes portant des illustrations identiques. L'ensemble des cartes est mélangé, puis
+    étalé face contre table. À son tour, chaque joueur retourne deux cartes de son choix. S'il découvre deux cartes
+    identiques, il les ramasse et les conserve, ce qui lui permet de rejouer. Si les cartes ne sont pas identiques, il
+    les retourne faces cachées à leur emplacement de départ.Le jeu se termine quand toutes les paires de cartes ont été
+    découvertes et ramassées
  </p>
 
 <p class="jouer"><a href="../js/jeux-memory/jeuxCarte/index.html">JOUER</a></p>

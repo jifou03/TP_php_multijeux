@@ -68,10 +68,9 @@
 </a>
 
 <p class="description_jeux">
-    Le principe du jeu est simple : il suffit de rebondir de plate-forme en plate-forme avec l'interdiction de redescendre
-    plus bas. Plus on arrive haut, plus le score augmente, et plus les choses se corsent, aussi. La maniabilité de la
-    bestiole que l'on incarne est d'une précision redoutable, ce qui fait la grande force du jeu et lui permet d'offrir
-    une grosse marge de progression.
+    Les extraterrestres ont envahi la Terre de nouveau. Avec l'aide de votre vaisseau spatial et de vos lasers,
+    vous pouvez détruire tout ce qui met sur votre chemin.Détruisez tout ce que vous voyez dans votre chemin pour
+    obtenir plus de points.
  </p>
 
 <p class="jouer"><a href="../js/invasion-extraterrestre/invasion/invasion.html">JOUER</a></p>

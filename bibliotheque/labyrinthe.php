@@ -68,10 +68,8 @@
 </a>
 
 <p class="description_jeux">
-    Le principe du jeu est simple : il suffit de rebondir de plate-forme en plate-forme avec l'interdiction de redescendre
-    plus bas. Plus on arrive haut, plus le score augmente, et plus les choses se corsent, aussi. La maniabilité de la
-    bestiole que l'on incarne est d'une précision redoutable, ce qui fait la grande force du jeu et lui permet d'offrir
-    une grosse marge de progression.
+    Le but du Labyrinthe est un jeu de plateau tactique où le joueur doit créer des chemins dans un labyrinthe
+    formé de tuiles afin de se rendre sur des emplacement précis.
  </p>
 
 <p class="jouer"><a href="../js/labyrinthe/labyrinthe/Labyrinthe.html">JOUER</a></p>
