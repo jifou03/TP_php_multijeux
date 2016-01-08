@@ -22,8 +22,5 @@ require_once 'view_parts/_main_menu.php';
     <a href="connection.php"><input type="button" value="connectez-vous ici" ></a>
 </div>
 <?php
-    echo "Bonjour " . $_SESSION['pseudo'];
-?>
-<?php
 require_once 'view_parts/_page_bottom.php';
 ?>

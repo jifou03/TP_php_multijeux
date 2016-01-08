@@ -3,6 +3,7 @@
     width:15%;
     position: relative;
 }
+
 #header h2{
     display: inline-block;
     position: absolute;
@@ -30,18 +31,15 @@ li.main_menu {
     text-align:center;
     position: relative;
 }
+
 ul{
     margin: 0 auto;
-    text-align: center;
-}
-
-li {
-    list-style:none;
 }
 
 .inscription {
     display:inline-block;
-    width:140px;
+    width:50%;
+    margin-top:10px;
 }
 
 .biblio {
@@ -56,4 +54,12 @@ li {
     width:377px;
     height: 300px;
     border: 1px solid black;
+}
+
+#nonestyle {
+    list-style:none;
+}
+
+.error {
+    background-color:orange;
 }
