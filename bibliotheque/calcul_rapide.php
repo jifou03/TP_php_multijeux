@@ -62,10 +62,18 @@
     </style>
 </head>
 <body>
-
-<a href="../js/puzzle_memoire/calcul_rapide.html" class="lien_image">
-    <img src="../js/puzzle_memoire/images/calcul.jpg" alt="image indisponible"/>
+<?php
+$calculRapide =array(
+    'lien' => '../js/puzzle_memoire/calcul_rapide.html',
+    'src'  => '../js/puzzle_memoire/images/calcul.jpg',
+    'alt'  => 'image indisponible',
+    'nom_jeux'=>'CALCUL RAPIDE'
+);
+?>
+<a href="<?php echo $calculRapide['lien'] ?>" class="lien_image">
+    <img src="<?php echo $calculRapide['src'] ?>" alt="<?php echo $casseBric['alt'] ?>"/>
 </a>
+
 
 <p class="description_jeux">
     Le principe du jeu est simple : il suffit de sauter d'un niveau à l'autre afin d'atteindre le panneau FINISH.Attention
@@ -73,9 +81,11 @@
     respectivement aller à gauche,sauter et aller à droite.
  </p>
 
-<p class="jouer"><a href="../js/puzzle_memoire/calcul_rapide.html">JOUER</a></p>
+<p class="jouer"><a href="<?php echo $calculRapide['lien'] ?>">JOUER</a></p>
 
-<p class="titre_jeux">CALCUL RAPIDE</p>
+
+<p class="titre_jeux"><?php echo $calculRapide['nom_jeux'] ?></p>
+
 
 
 <?php ?>

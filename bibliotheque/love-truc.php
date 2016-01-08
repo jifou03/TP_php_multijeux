@@ -62,9 +62,19 @@
     </style>
 </head>
 <body>
-
-<a href="../js/love-trucator/Lvcalculator%20by%20mika-------------------/love%20calc%20by%20mika.html" class="lien_image">
+<?php
+$loveTruc =array(
+    'lien' => '../js/love-trucator/Lvcalculator%20by%20mika-------------------/love%20calc%20by%20mika.html',
+    'src'  => '../js/love-trucator/Lvcalculator%20by%20mika-------------------/imagelv/love.PNG',
+    'alt'  => 'image indisponible',
+    'nom_jeux'=>'LOVE CALCULATOR'
+);
+?>
+<!--<a href="../js/love-trucator/Lvcalculator%20by%20mika-------------------/love%20calc%20by%20mika.html" class="lien_image">
     <img src="../js/love-trucator/Lvcalculator%20by%20mika-------------------/imagelv/love.PNG" alt="image indisponible"/>
+</a>-->
+<a href="<?php echo $loveTruc['lien'] ?>" class="lien_image">
+    <img src="<?php echo $loveTruc['src'] ?>" alt="<?php echo $loveTruc['alt'] ?>"/>
 </a>
 
 <p class="description_jeux">
@@ -73,9 +83,9 @@
     respectivement aller à gauche,sauter et aller à droite.
  </p>
 
-<p class="jouer"><a href="../js/love-trucator/Lvcalculator%20by%20mika-------------------/love%20calc%20by%20mika.html">JOUER</a></p>
+<p class="jouer"><a href="<?php echo $loveTruc['lien'] ?>">JOUER</a></p>
 
-<p class="titre_jeux">LOVE CALCULATOR</p>
+<p class="titre_jeux"><?php echo $loveTruc['nom_jeux'] ?></p>
 
 
 <?php ?>
