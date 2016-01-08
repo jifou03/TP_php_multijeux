@@ -8,7 +8,7 @@ $nom_ok = false;
 if (array_key_exists('nom', $_POST)) {
     $nom = filter_input(INPUT_POST, 'nom', FILTER_SANITIZE_MAGIC_QUOTES);
     $nom = filter_var($nom, FILTER_SANITIZE_STRING);
-    $nom_ok = (1 === preg_match('/^[A-Za-z0-9]{4,}$/', $nom)); // Validation du username : des alpha minuscules et chiffres, min 4 caractères
+    $nom_ok = (1 === preg_match('/^[A-Za-z0-9\-ç]{4,}$/', $nom)); // Validation du username : des alpha minuscules et chiffres, min 4 caractères
     var_dump($nom);
     var_dump($nom_ok);
 
@@ -18,7 +18,7 @@ $prenom_ok = false;
 if (array_key_exists('prenom', $_POST)) {
     $prenom = filter_input(INPUT_POST, 'prenom', FILTER_SANITIZE_MAGIC_QUOTES);
     $prenom = filter_var($prenom, FILTER_SANITIZE_STRING);
-    $prenom_ok = (1 === preg_match('/^[A-Za-z0-9]{4,}$/', $prenom)); // Validation du username : des alpha minuscules et chiffres, min 4 caractères
+    $prenom_ok = (1 === preg_match('/^[A-Za-z0-9ç\-]{4,}$/', $prenom)); // Validation du username : des alpha minuscules et chiffres, min 4 caractères
     var_dump($prenom);
     var_dump($prenom_ok);
 
@@ -70,7 +70,7 @@ if ($nom_ok && $prenom_ok && $password_ok && $courriel_ok && $pseudo_ok && $gend
     $courriel = $_POST['courriel'];
     $sexe = $_POST['gender'];
 
-    $link = mysqli_connect("localhost", "root", "") or die("Couldn't connect wtf");
+    $link = mysqli_connect("localhost","p62a15tpinda_multijeuxdb", "multijeux", "multijeux") or die("Couldn't connect wtf");
 
     mysqli_select_db($link, 'multijeux') or die ("Couldn't connect AGAIN");
 
