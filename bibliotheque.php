@@ -1,6 +1,11 @@
 <?php
 require_once '_defines.php';
 $site_data[PAGE_ID] = 'bibliotheque';
+session_name("h8278");
+session_start();
+if ($_SESSION['pseudo'] == null) {
+    header('Location: http://localhost/tp_php_multijeux/index.php');
+}
 require_once 'view_parts/_page_base.php';
 require_once 'view_parts/_header.php';
 require_once 'view_parts/_main_menu.php';
@@ -27,7 +32,7 @@ require_once 'view_parts/_main_menu.php';
 <p class="biblio"><a href="bibliotheque/machine-a-sous.php"><img src="js/machine-a-sous/casino/casino.PNG" alt="image indisponible"/>
                 MACHINE A SOUS</a></p>
 <p class="biblio"><a href="bibliotheque/mastermind.php"><img src="js/mastermind-iphone/mastermind.PNG" alt="image indisponible"/>
-                @@ -28,5 +34,13 @@
+                @@ -28,5 +34,13 @@</a></p>
 
 <p class="biblio"><a href="bibliotheque/moby-bros.php"><img src="js/moby-bros-l-aventurier-des-etoiles/moby.PNG" alt="image indisponible"/>
                 MOBY BROS</a></p>

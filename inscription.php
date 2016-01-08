@@ -9,9 +9,6 @@ if (array_key_exists('nom', $_POST)) {
     $nom = filter_input(INPUT_POST, 'nom', FILTER_SANITIZE_MAGIC_QUOTES);
     $nom = filter_var($nom, FILTER_SANITIZE_STRING);
     $nom_ok = (1 === preg_match('/^[A-Za-z0-9]{4,}$/', $nom)); // Validation du username : des alpha minuscules et chiffres, min 4 caractères
-    var_dump($nom);
-    var_dump($nom_ok);
-
 }
 
 $prenom_ok = false;
@@ -19,9 +16,6 @@ if (array_key_exists('prenom', $_POST)) {
     $prenom = filter_input(INPUT_POST, 'prenom', FILTER_SANITIZE_MAGIC_QUOTES);
     $prenom = filter_var($prenom, FILTER_SANITIZE_STRING);
     $prenom_ok = (1 === preg_match('/^[A-Za-z0-9]{4,}$/', $prenom)); // Validation du username : des alpha minuscules et chiffres, min 4 caractères
-    var_dump($prenom);
-    var_dump($prenom_ok);
-
 }
 
 $pseudo_ok = false;
@@ -32,9 +26,6 @@ if (array_key_exists('pseudo', $_POST)) {
     if ($pseudo_ok) {
 
     }
-    var_dump($pseudo);
-    var_dump($pseudo_ok);
-
 }
 
 $password_ok = false;
@@ -42,9 +33,6 @@ if (array_key_exists('password', $_POST)) {
     $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_MAGIC_QUOTES);
     $password = filter_var($password, FILTER_SANITIZE_STRING);
     $password_ok = (1 === preg_match('/^[A-Za-z0-9%&$!*?]{8,12}$/', $password)); // Validation du username : des alpha minuscules et chiffres, min 4 caractères
-    var_dump($password);
-    var_dump($password_ok);
-
 }
 
 $courriel_ok = false;
@@ -52,8 +40,6 @@ if (array_key_exists('courriel', $_POST)) {
     $courriel = filter_input(INPUT_POST, 'courriel', FILTER_SANITIZE_EMAIL);
     $courriel = filter_var($courriel, FILTER_VALIDATE_EMAIL);
     $courriel_ok = (false !== $courriel);
-    var_dump($courriel);
-    var_dump($courriel_ok);
 }
 
 $gender_ok = false;
