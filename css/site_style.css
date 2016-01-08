@@ -63,3 +63,7 @@ ul{
 .error {
     background-color:orange;
 }
+
+.error>span{
+   color: red;
+}

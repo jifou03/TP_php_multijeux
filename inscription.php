@@ -70,7 +70,7 @@ if ($nom_ok && $prenom_ok && $password_ok && $courriel_ok && $pseudo_ok && $gend
     $courriel = $_POST['courriel'];
     $sexe = $_POST['gender'];
 
-    $link = mysqli_connect("localhost", "root", "") or die("Couldn't connect wtf");
+    $link = mysqli_connect("localhost","p62a15tpinda_multijeuxdb", "multijeux", "multijeux") or die("Couldn't connect wtf");
 
     mysqli_select_db($link, 'multijeux') or die ("Couldn't connect AGAIN");
 
