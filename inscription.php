@@ -47,16 +47,6 @@ if (array_key_exists('password', $_POST)) {
 
 }
 
-$password_ok = false;
-if (array_key_exists('password', $_POST)) {
-    $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_MAGIC_QUOTES);
-    $password = filter_var($password, FILTER_SANITIZE_STRING);
-    $password_ok = (1 === preg_match('/^[A-Za-z0-9%&$!*?]{8,12}$/', $password)); // Validation du username : des alpha minuscules et chiffres, min 4 caractères
-    var_dump($password);
-    var_dump($password_ok);
-
-}
-
 $courriel_ok = false;
 if (array_key_exists('courriel', $_POST)) {
     $courriel = filter_input(INPUT_POST, 'courriel', FILTER_SANITIZE_EMAIL);
