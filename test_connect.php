@@ -1,29 +1,27 @@
 <?php
     $link = mysqli_connect("localhost", "root", "") or die("Couldn't connect wtf");
     mysqli_select_db($link, 'multijeux') or die ("Couldn't connect AGAIN");
-    $username = $_POST['username'];
-    $user_password = $_POST['password'];
-    echo $username;
-    /*$query = "SELECT * FROM users WHERE username='$username'";
 
-   if ($result = mysqli_query($link, $query)) {
-            echo '<p>', "Il y a ce nom dans la base de donnée", '</p>';
-        } else {
-            echo '<p>', "Il n'y a pas ce nom dans la base de donnée", '</p>';
-        }*/
-
-    $query = "SELECT * FROM users WHERE username='$username' && password ='$user_password'";
+    $query = "SELECT * FROM users WHERE username = '$username'";
     $result = mysqli_query($link, $query);
-    $num_row = mysqli_num_rows($result);
+    $get_user_info = mysqli_fetch_array($result);
+    var_dump($get_user_info);
 
-if ($_POST['submit']) {
-    if ($num_row == 0){
-        header('Location: http://localhost/tp_php_multijeux/connection.php?error=1');
+    if (array_key_exists('password', $_POST) AND array_key_exists('username', $_POST)) {
+        if ( ! empty($_POST['password'] AND ! empty($_POST['username'])) ){
+            if ($_POST['username'] == $get_user_info['username'] AND sha1($_POST['password']) == ($get_user_info['password'])) {
+                session_name("h8278");
+                session_start();
+                $_SESSION['pseudo'] = $_POST['username'];
+                echo $_SESSION['pseudo'];
+                header('Location: http://localhost/tp_php_multijeux/jndex.php');
+            } else {
+                header('Location: http://localhost/tp_php_multijeux/connection.php?error=1');
+            }
+        } else {
+            header('Location: http://localhost/tp_php_multijeux/connection.php');
+        }
     } else {
-       session_start();
-       $_SESSION['id'] = $num_row['id'];
-       $_SESSION['username'] = $username;
-       echo '<p>', "Vous êtes connecté", '</p>';
+        header('Location: http://localhost/tp_php_multijeux/connection.php');
     }
-}
 ?>

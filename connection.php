@@ -14,15 +14,13 @@ require_once 'view_parts/_main_menu.php';
     <input type="text" id="username" name="username"></p>
     <p><label for="password">Mot de passe: </label>
     <input type="password" id="password" name="password"></p>
-    <p><label for="cookie">connection automatique: </label>
-    <input type="checkbox" id="cookie" name="cookie"></p>
     <p><input type="submit" id="submit" name="submit" value="Soumettre"/></p>
 </form>
 <?php
 require_once 'view_parts/_page_bottom.php';
  if (isset($_GET['error'])) {
      if ($_GET['error'] == 1) {
-         echo "Le nom d'utilisateur et/ou le mot de passe n'est pas valide";
+         echo "Le nom d'utilisateur et/ou le mot de passe n'est pas valide.";
          header('Location test_validation.php');
      } else if ($_GET['error'] != 1){
          header('Location test_validation.php');

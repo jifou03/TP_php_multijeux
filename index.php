@@ -1,6 +1,8 @@
 <?php
 require_once '_defines.php';
 $site_data[PAGE_ID] = 'index';
+session_name("h8278");
+session_start();
 require_once 'view_parts/_page_base.php';
 require_once 'view_parts/_header.php';
 require_once 'view_parts/_main_menu.php';
@@ -19,7 +21,9 @@ require_once 'view_parts/_main_menu.php';
 
     <a href="connection.php"><input type="button" value="connectez-vous ici" ></a>
 </div>
-
+<?php
+    echo "Bonjour " . $_SESSION['pseudo'];
+?>
 <?php
 require_once 'view_parts/_page_bottom.php';
 ?>
