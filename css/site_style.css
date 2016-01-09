@@ -38,7 +38,7 @@ ul{
 
 .inscription {
     display:inline-block;
-    width:15%;
+    width:50%;
     margin-top:10px;
 }
 
@@ -62,4 +62,8 @@ ul{
 
 .error {
     background-color:orange;
+}
+
+.error>span{
+   color: red;
 }
