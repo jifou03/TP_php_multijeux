@@ -93,40 +93,13 @@ require_once 'view_parts/_main_menu.php';
 ?>
 <?php
 
-/*foreach($biblio as $key => $val){
-    echo "<p class=\"biblio\"><a href=\"<?php echo $biblio[$key]['lien'] ?>\"><img src=\"<?php echo $biblio[$key]['src'] ?>\" alt=\"<?php echo $biblio[$key]['alt'] ?>\"/>
-        <?php echo $biblio[$key]['nom_jeux'] ?></a></p>";
-}*/
+foreach($biblio as $key => $val){ ?>
+    <p class="biblio"><a href="<?php echo $biblio[$key]['lien'] ?>"><img src="<?php echo $biblio[$key]['src'] ?>" alt="<?php echo $biblio[$key]['alt'] ?>"/>
+            <?php echo $biblio[$key]['nom_jeux'] ?></a></p>
 
 
-
+    <?php }
 ?>
-
-<p class="biblio"><a href="<?php echo $biblio[0]['lien'] ?>"><img src="<?php echo $biblio[0]['src'] ?>" alt="<?php echo $biblio[0]['alt'] ?>"/>
-        <?php echo $biblio[0]['nom_jeux'] ?></a></p>
-<p class="biblio"><a href="<?php echo $biblio[1]['lien'] ?>"><img src="<?php echo $biblio[1]['src'] ?>" alt="<?php echo $biblio[1]['alt'] ?>"/>
-        <?php echo $biblio[1]['nom_jeux'] ?></a></p>
-<p class="biblio"><a href="<?php echo $biblio[2]['lien'] ?>"><img src="<?php echo $biblio[2]['src'] ?>" alt="<?php echo $biblio[2]['alt'] ?>"/>
-        <?php echo $biblio[2]['nom_jeux'] ?></a></p>
-<p class="biblio"><a href="<?php echo $biblio[3]['lien'] ?>"><img src="<?php echo $biblio[3]['src'] ?>" alt="<?php echo $biblio[3]['alt'] ?>"/>
-        <?php echo $biblio[3]['nom_jeux'] ?></a></p>
-<p class="biblio"><a href="<?php echo $biblio[4]['lien'] ?>"><img src="<?php echo $biblio[4]['src'] ?>" alt="<?php echo $biblio[4]['alt'] ?>"/>
-        <?php echo $biblio[4]['nom_jeux'] ?></a></p>
-<p class="biblio"><a href="<?php echo $biblio[5]['lien'] ?>"><img src="<?php echo $biblio[5]['src'] ?>" alt="<?php echo $biblio[5]['alt'] ?>"/>
-        <?php echo $biblio[5]['nom_jeux'] ?></a></p>
-<p class="biblio"><a href="<?php echo $biblio[6]['lien'] ?>"><img src="<?php echo $biblio[6]['src'] ?>" alt="<?php echo $biblio[6]['alt'] ?>"/>
-        <?php echo $biblio[6]['nom_jeux'] ?></a></p>
-<p class="biblio"><a href="<?php echo $biblio[10]['lien'] ?>"><img src="<?php echo $biblio[10]['src'] ?>" alt="<?php echo $biblio[10]['alt'] ?>"/>
-        <?php echo $biblio[10]['nom_jeux'] ?></a></p>
-<p class="biblio"><a href="<?php echo $biblio[8]['lien'] ?>"><img src="<?php echo $biblio[8]['src'] ?>" alt="<?php echo $biblio[8]['alt'] ?>"/>
-        <?php echo $biblio[8]['nom_jeux'] ?></a></p>
-<p class="biblio"><a href="<?php echo $biblio[9]['lien'] ?>"><img src="<?php echo $biblio[9]['src'] ?>" alt="<?php echo $biblio[9]['alt'] ?>"/>
-        <?php echo $biblio[9]['nom_jeux'] ?></a></p>
-<p class="biblio"><a href="<?php echo $biblio[7]['lien'] ?>"><img src="<?php echo $biblio[7]['src'] ?>" alt="<?php echo $biblio[7]['alt'] ?>"/>
-        <?php echo $biblio[7]['nom_jeux'] ?></a></p>
-<p class="biblio"><a href="<?php echo $biblio[11]['lien'] ?>"><img src="<?php echo $biblio[11]['src'] ?>" alt="<?php echo $biblio[11]['alt'] ?>"/>
-        <?php echo $biblio[11]['nom_jeux'] ?></a></p>
-
 
 
 </body>
