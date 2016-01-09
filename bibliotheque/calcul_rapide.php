@@ -118,6 +118,7 @@ $calculRapide =array(
 
     <img src="<?php echo '../images/unlike.jpg'?>" alt="<?php echo $calculRapide['alt'] ?>" id="img2" class="likes" />
 </p>
+<p></p>
 
 <?php  ?>
 <p class="titre_jeux"><?php echo $calculRapide['nom_jeux'] ?></p>
