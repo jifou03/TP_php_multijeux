@@ -63,7 +63,7 @@
 </head>
 <body>
 
-<a href="../js/puzzle_memoire/puzzle.html" class="lien_image">
+<a href="../js/puzzle_memoire/puzzle.php" class="lien_image">
     <img src="../js/puzzle_memoire/images/puzzle.PNG" alt="image indisponible"/>
 </a>
 
@@ -73,7 +73,7 @@
     respectivement aller à gauche,sauter et aller à droite.
  </p>
 
-<p class="jouer"><a href="../js/puzzle_memoire/puzzle.html">JOUER</a></p>
+<p class="jouer"><a href="../js/puzzle_memoire/puzzle.php">JOUER</a></p>
 
 <p class="titre_jeux">PUZZLE</p>
 

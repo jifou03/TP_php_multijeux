@@ -93,7 +93,7 @@ if(! array_key_exists('session_like',$_SESSION)){
 ?>
 <?php
 $calculRapide =array(
-    'lien' => '../js/puzzle_memoire/calcul_rapide.html',
+    'lien' => '../js/puzzle_memoire/calcul_rapide.php',
     'src'  => '../js/puzzle_memoire/images/calcul.jpg',
     'alt'  => 'image indisponible',
     'nom_jeux'=>'CALCUL RAPIDE'
