@@ -11,6 +11,12 @@ require_once 'view_parts/_main_menu.php';
 
 <div id="main">
     <h1>Bienvenue sur Multijeux</h1>
+    <?php
+    if(isset($_SESSION['pseudo']))
+    {
+        echo '<p class="bienvenue">', "Bonjour " . $_SESSION['pseudo'] . ". Veuillez aller dans la bibliothèque pour consulter notre liste de jeux.", '</p>';
+    }
+    ?>
     <p>Si vous etes un nouveau visiteur de ce site de jeux, veuillez clique sur
         le bouton ci-dessous afin de vous inscrire.
     </p>

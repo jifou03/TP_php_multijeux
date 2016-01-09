@@ -19,7 +19,6 @@ if (array_key_exists('prenom', $_POST)) {
     $prenom = filter_var($prenom, FILTER_SANITIZE_STRING);
     $prenom_ok = (1 === preg_match('/^[A-Za-z0-9ç\-]{4,}$/', $prenom)); // Validation du username : des alpha minuscules et chiffres, min 4 caractères
 
-
 }
 
 $pseudo_ok = false;
@@ -31,7 +30,6 @@ if (array_key_exists('pseudo', $_POST)) {
 
     }
 
-
 }
 
 $password_ok = false;
@@ -40,7 +38,6 @@ if (array_key_exists('password', $_POST)) {
     $password = filter_var($password, FILTER_SANITIZE_STRING);
     $password_ok = (1 === preg_match('/^[A-Za-z0-9%&$!*?]{8,12}$/', $password)); // Validation du username : des alpha minuscules et chiffres, min 4 caractères
 
-
 }
 
 $courriel_ok = false;
@@ -48,7 +45,6 @@ if (array_key_exists('courriel', $_POST)) {
     $courriel = filter_input(INPUT_POST, 'courriel', FILTER_SANITIZE_EMAIL);
     $courriel = filter_var($courriel, FILTER_VALIDATE_EMAIL);
     $courriel_ok = (false !== $courriel);
-
 }
 
 $gender_ok = false;
@@ -65,7 +61,7 @@ if ($nom_ok && $prenom_ok && $password_ok && $courriel_ok && $pseudo_ok && $gend
     $courriel = $_POST['courriel'];
     $sexe = $_POST['gender'];
 
-    $link = mysqli_connect("localhost", "root", "") or die("Couldn't connect wtf");
+    $link = mysqli_connect("localhost","root", "") or die("Couldn't connect wtf");
 
     mysqli_select_db($link, 'multijeux') or die ("Couldn't connect AGAIN");
 

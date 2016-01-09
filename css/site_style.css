@@ -67,3 +67,8 @@ ul{
 .error>span{
    color: red;
 }
+
+.bienvenue {
+    font-weight: bold;
+    font-size:200%;
+}
