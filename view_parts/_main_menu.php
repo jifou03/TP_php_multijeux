@@ -4,7 +4,8 @@ $menu_data = array (
     'jeux' => 'contact.php',
     'Inscription' => 'inscription.php',
     'Bibliotheque' =>'bibliotheque.php',
-    'Mon profil' => 'dashboard.php'
+    'Modifier mot de passe' => 'modifier_mdp',
+    'Deconnexion' => 'deconnexion.php'
 );
 ?>
 
