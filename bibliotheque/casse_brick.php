@@ -62,20 +62,28 @@
     </style>
 </head>
 <body>
-
-<a href="../js/casse-brick/pong/casse%20brick.html" class="lien_image">
+<?php
+$casseBric =array(
+    'lien' => '../js/casse-brick/pong/casse%20brick.html',
+    'src'  => './js/casse-brick/pong/images/casse_brick.PNG',
+    'alt'  => 'image indisponible',
+    'nom_jeux'=>'CASSE BRICK'
+); ?>
+<!--<a href="../js/casse-brick/pong/casse%20brick.html" class="lien_image">
     <img src="../js/casse-brick/pong/images/casse_brick.PNG" alt="image indisponible"/>
+</a>-->
+<a href="<?php echo $casseBric['lien'] ?>" class="lien_image">
+    <img src="<?php echo $casseBric['src'] ?>" alt="<?php echo $casseBric['alt'] ?>"/>
 </a>
-
 <p class="description_jeux">
     Le principe du jeu est simple : il suffit de sauter d'un niveau à l'autre afin d'atteindre le panneau FINISH.Attention
     à ne pas tomber et a éviter tout en les crocodiles placés sur le chemin.Pour cela utiliser les touches 4,8,6 pour
     respectivement aller à gauche,sauter et aller à droite.
  </p>
 
-<p class="jouer"><a href="../js/casse-brick/pong/casse%20brick.html">JOUER</a></p>
+<p class="jouer"><a href="<?php echo $casseBric['lien'] ?>">JOUER</a></p>
 
-<p class="titre_jeux">CASSE BRICK</p>
+<p class="titre_jeux"><?php echo $casseBric['nom_jeux'] ?>/p>
 
 
 <?php ?>
