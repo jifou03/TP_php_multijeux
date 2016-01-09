@@ -3,9 +3,8 @@ $menu_data = array (
     'Accueil' => 'index.php',
     'jeux' => 'contact.php',
     'Inscription' => 'inscription.php',
-    'Bibliothèque' =>'bibliotheque.php',
-    'Modifier mot de passe' => 'modifier_mdp.php',
-    'Deconnexion' => 'deconnexion.php'
+    'Bibliotheque' =>'bibliotheque.php',
+    'Mon profil' => 'dashboard.php'
 );
 ?>
 

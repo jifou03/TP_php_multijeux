@@ -15,6 +15,7 @@
                 session_name("h8278");
                 session_start();
                 $_SESSION['pseudo'] = $_POST['username'];
+                echo $_SESSION['pseudo'];
                 header('Location: http://localhost/tp_php_multijeux/index.php');
             } else {
                 header('Location: http://localhost/tp_php_multijeux/connection.php?error=1');
