@@ -1,5 +1,11 @@
 <?php
+define('LIKE_ID','like_id');
+define('SESS_LIKE','sess_like');
+session_start();
 
+if(! array_key_exists('session_like',$_SESSION)){
+    $_SESSION['like']= array();
+}
 
 
 ?>
@@ -17,7 +23,7 @@
             margin: 3%;
 
         }
-        img{
+        a img{
             width:  477px;
             height: 400px;
             border: 1px solid black;
@@ -39,7 +45,26 @@
             color: blue;
             position: absolute;
             left: 50%;
-            bottom :50%;
+            bottom :60%;
+
+        }
+
+        .like{
+            width: 5%;
+            vertical-align: top;
+            color: red;
+            position: absolute;
+            left: 42%;
+            bottom :45%;
+
+        }
+        .likes{
+             width: 5%;
+            vertical-align: top;
+            color: red;
+            position: absolute;
+            left: 52%;
+            bottom :45%;
 
         }
 
@@ -63,6 +88,10 @@
 </head>
 <body>
 <?php
+
+
+?>
+<?php
 $calculRapide =array(
     'lien' => '../js/puzzle_memoire/calcul_rapide.html',
     'src'  => '../js/puzzle_memoire/images/calcul.jpg',
@@ -71,7 +100,7 @@ $calculRapide =array(
 );
 ?>
 <a href="<?php echo $calculRapide['lien'] ?>" class="lien_image">
-    <img src="<?php echo $calculRapide['src'] ?>" alt="<?php echo $casseBric['alt'] ?>"/>
+    <img src="<?php echo $calculRapide['src'] ?>" alt="<?php echo $calculRapide['alt'] ?>"/>
 </a>
 
 
@@ -81,13 +110,42 @@ $calculRapide =array(
     respectivement aller à gauche,sauter et aller à droite.
  </p>
 
+
 <p class="jouer"><a href="<?php echo $calculRapide['lien'] ?>">JOUER</a></p>
 
+<p>
+    <img src="../images/like.png" alt="<?php echo $calculRapide['alt'] ?>" id="img1" class="like" "/>
 
+    <img src="<?php echo '../images/unlike.jpg'?>" alt="<?php echo $calculRapide['alt'] ?>" id="img2" class="likes" />
+</p>
+
+<?php  ?>
 <p class="titre_jeux"><?php echo $calculRapide['nom_jeux'] ?></p>
 
 
+<script>
 
-<?php ?>
+    document.getElementById('img1').addEventListener ('click', function() {
+        var img = document.getElementsByClassName('like')[0];
+        console.log(img.src);
+        if (img.src == 'http://localhost/TP_php_multijeux/images/like.png') {
+            img.src = 'http://localhost/TP_php_multijeux/images/like0.jpg';
+            console.log(img.src);
+        } else if (img.src =='http://localhost/TP_php_multijeux/images/like0.jpg') {
+            img.src = 'http://localhost/TP_php_multijeux/images/like.png';
+        }
+    });
+
+    document.getElementById('img2').addEventListener ('click', function() {
+        var img = document.getElementsByClassName('likes')[0];
+        console.log(img.src);
+        if (img.src == 'http://localhost/TP_php_multijeux/images/unlike.jpg') {
+            img.src = 'http://localhost/TP_php_multijeux/images/unlike0.jpg';
+            console.log(img.src);
+        } else if (img.src =='http://localhost/TP_php_multijeux/images/unlike0.jpg') {
+            img.src = 'http://localhost/TP_php_multijeux/images/unlike.jpg';
+        }
+    });
+</script>
 </body>
 </html>

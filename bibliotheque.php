@@ -1,6 +1,10 @@
 <?php
 require_once '_defines.php';
 $site_data[PAGE_ID] = 'bibliotheque';
+session_name("h8278");
+session_start();
+var_dump($_SESSION);
+
 require_once 'view_parts/_page_base.php';
 require_once 'view_parts/_header.php';
 require_once 'view_parts/_main_menu.php';
@@ -12,19 +16,22 @@ require_once 'view_parts/_main_menu.php';
                             'lien' => 'bibliotheque/calcul_rapide.php',
                             'src'  => 'js/puzzle_memoire/images/calcul.jpg',
                             'alt'  => 'image indisponible',
-                            'nom_jeux'=>'CALCUL RAPIDE'
+                            'nom_jeux'=>'CALCUL RAPIDE',
+                            'details' => "Le principe du jeu est simple : il suffit de sauter d'un niveau à l'autre afin d'atteindre le panneau FINISH.Attention
+    à ne pas tomber et a éviter tout en les crocodiles placés sur le chemin.Pour cela utiliser les touches 4,8,6 pour
+    respectivement aller à gauche,sauter et aller à droite.",
                         ),
     array(
         'lien' => 'bibliotheque/doodle_jump.php',
         'src'  => 'js/doodle-jump-en-javascript/img/doodle_jeux.PNG',
         'alt'  => 'image indisponible',
-        'nom_jeux'=>'DOODLE JUMP'
+        'nom_jeux'=>'DOODLE JUMP',
     ),
     array(
         'lien' => 'bibliotheque/invasion-extraterrestre.php',
         'src'  => 'js/invasion-extraterrestre/invasion/res/invasion.jpg',
         'alt'  => 'image indisponible',
-        'nom_jeux'=>'INVASION EXTRATERRESTRE'
+        'nom_jeux'=>'INVASION EXTRATERRESTRE',
     ),
     array(
         'lien' => 'bibliotheque/jeu-de-mot-facile.php',
@@ -83,6 +90,17 @@ require_once 'view_parts/_main_menu.php';
 )
 
 ?>
+<?php
+
+/*foreach($biblio as $key => $val){
+    echo "<p class=\"biblio\"><a href=\"<?php echo $biblio[$key]['lien'] ?>\"><img src=\"<?php echo $biblio[$key]['src'] ?>\" alt=\"<?php echo $biblio[$key]['alt'] ?>\"/>
+        <?php echo $biblio[$key]['nom_jeux'] ?></a></p>";
+}*/
+
+
+
+?>
+
 <p class="biblio"><a href="<?php echo $biblio[0]['lien'] ?>"><img src="<?php echo $biblio[0]['src'] ?>" alt="<?php echo $biblio[0]['alt'] ?>"/>
         <?php echo $biblio[0]['nom_jeux'] ?></a></p>
 <p class="biblio"><a href="<?php echo $biblio[1]['lien'] ?>"><img src="<?php echo $biblio[1]['src'] ?>" alt="<?php echo $biblio[1]['alt'] ?>"/>
@@ -107,5 +125,8 @@ require_once 'view_parts/_main_menu.php';
         <?php echo $biblio[7]['nom_jeux'] ?></a></p>
 <p class="biblio"><a href="<?php echo $biblio[11]['lien'] ?>"><img src="<?php echo $biblio[11]['src'] ?>" alt="<?php echo $biblio[11]['alt'] ?>"/>
         <?php echo $biblio[11]['nom_jeux'] ?></a></p>
+
+
+
 </body>
 </html>
