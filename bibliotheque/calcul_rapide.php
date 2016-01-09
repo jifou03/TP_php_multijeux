@@ -129,22 +129,22 @@ $calculRapide =array(
     document.getElementById('img1').addEventListener ('click', function() {
         var img = document.getElementsByClassName('like')[0];
         console.log(img.src);
-        if (img.src == 'http://localhost/TP_php_multijeux/images/like.png') {
-            img.src = 'http://localhost/TP_php_multijeux/images/like0.jpg';
+        if (img.src == 'http://localhost/tp_php_multijeux/images/like.png') {
+            img.src = 'http://localhost/tp_php_multijeux/images/like0.jpg';
             console.log(img.src);
-        } else if (img.src =='http://localhost/TP_php_multijeux/images/like0.jpg') {
-            img.src = 'http://localhost/TP_php_multijeux/images/like.png';
+        } else if (img.src =='http://localhost/tp_php_multijeux/images/like0.jpg') {
+            img.src = 'http://localhost/tp_php_multijeux/images/like.png';
         }
     });
 
     document.getElementById('img2').addEventListener ('click', function() {
         var img = document.getElementsByClassName('likes')[0];
         console.log(img.src);
-        if (img.src == 'http://localhost/TP_php_multijeux/images/unlike.jpg') {
-            img.src = 'http://localhost/TP_php_multijeux/images/unlike0.jpg';
+        if (img.src == 'http://localhost/tp_php_multijeux/images/unlike.jpg') {
+            img.src = 'http://localhost/tp_php_multijeux/images/unlike0.jpg';
             console.log(img.src);
-        } else if (img.src =='http://localhost/TP_php_multijeux/images/unlike0.jpg') {
-            img.src = 'http://localhost/TP_php_multijeux/images/unlike.jpg';
+        } else if (img.src =='http://localhost/tp_php_multijeux/images/unlike0.jpg') {
+            img.src = 'http://localhost/tp_php_multijeux/images/unlike.jpg';
         }
     });
 </script>
