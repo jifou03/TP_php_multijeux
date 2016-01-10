@@ -14,14 +14,11 @@ require_once 'view_parts/_main_menu.php';
 <h1><?= ucfirst($site_data[PAGE_ID]); ?></h1>
 <?php $biblio = array(
                         array(
-                            'lien' => 'bibliotheque/calcul_rapide.html',
+                            'lien' => 'bibliotheque/calcul_rapide.php',
                             'src'  => 'js/puzzle_memoire/images/calcul.jpg',
                             'alt'  => 'image indisponible',
                             'nom_jeux'=>'CALCUL RAPIDE',
-                            'details' => "Le principe du jeu est simple : il suffit de sauter d'un niveau à l'autre afin d'atteindre le panneau FINISH.Attention
-    à ne pas tomber et a éviter tout en les crocodiles placés sur le chemin.Pour cela utiliser les touches 4,8,6 pour
-    respectivement aller à gauche,sauter et aller à droite.",
-                        ),
+                            ),
     array(
         'lien' => 'bibliotheque/doodle_jump.php',
         'src'  => 'js/doodle-jump-en-javascript/img/doodle_jeux.PNG',
@@ -41,40 +38,45 @@ require_once 'view_parts/_main_menu.php';
         'nom_jeux'=>'JEUX DE MOTS FACILE'
     ),
     array(
-        'lien' => 'bibliotheque/puzzle.html',
+        'lien' => 'bibliotheque/puzzle.php',
         'src'  => 'js/puzzle_memoire/images/puzzle.PNG',
         'alt'  => 'image indisponible',
         'nom_jeux'=>'PUZZLE'
     ),
+
     array(
-        'lien' => 'bibliotheque/jeu-du-sepent-snake.php',
-        'src'  => 'js/jeux-du-serpent-snake/serpent/serpent.PNG',
+        'lien' => 'bibliotheque/moby-bros.php',
+        'src'  => 'js/moby-bros-l-aventurier-des-etoiles/moby.PNG',
         'alt'  => 'image indisponible',
-        'nom_jeux'=>'JEUX DU SERPENT SNAKE'
+        'nom_jeux'=>'MOBY BROS'
     ),
+
     array(
         'lien' => 'bibliotheque/jeu-memory.php',
         'src'  => 'js/jeux-memory/jeuxCarte/jeux_memoire.png',
         'alt'  => 'image indisponible',
         'nom_jeux'=>'JEUX DE MEMOIRE'
     ),
+
     array(
-        'lien' => 'bibliotheque/machine-a-sous.php',
-        'src'  => 'js/machine-a-sous/casino/casino.PNG',
+        'lien' => 'bibliotheque/jeu-du-sepent-snake.php',
+        'src'  => 'js/jeux-du-serpent-snake/serpent/serpent.PNG',
         'alt'  => 'image indisponible',
-        'nom_jeux'=>'MACHINE A SOUS'
+        'nom_jeux'=>'JEUX DU SERPENT SNAKE'
     ),
+
     array(
         'lien' => 'bibliotheque/mastermind.php',
         'src'  => 'js/mastermind-iphone/mastermind.PNG',
         'alt'  => 'image indisponible',
         'nom_jeux'=>'MASTERMIND'
     ),
+
     array(
-        'lien' => 'bibliotheque/moby-bros.php',
-        'src'  => 'js/moby-bros-l-aventurier-des-etoiles/moby.PNG',
+        'lien' => 'bibliotheque/machine-a-sous.php',
+        'src'  => 'js/machine-a-sous/casino/casino.PNG',
         'alt'  => 'image indisponible',
-        'nom_jeux'=>'MOBY BROS'
+        'nom_jeux'=>'MACHINE A SOUS'
     ),
     array(
         'lien' => 'bibliotheque/casse_brick.php',

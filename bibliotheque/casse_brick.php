@@ -17,9 +17,9 @@
             margin: 3%;
 
         }
-        img{
-            width:  477px;
-            height: 400px;
+        a img{
+            width:  137%;
+            height: 190%;
             border: 1px solid black;
         }
         .description_jeux{
@@ -42,6 +42,22 @@
             bottom :50%;
 
         }
+        .like{
+            width: 50px;
+            height:50px;
+            position: absolute;
+            left: 42%;
+            bottom :32%;
+
+        }
+        .likes{
+            width: 50px;
+            height:50px;
+            position: absolute;
+            left: 48%;
+            bottom :29.5%;
+
+        }
 
 
         .titre_jeux,.titre_jeux a{
@@ -58,26 +74,66 @@
 
         }
 
-
     </style>
 </head>
 <body>
-
-<a href="../js/casse-brick/pong/casse%20brick.html" class="lien_image">
-    <img src="../js/casse-brick/pong/images/casse_brick.PNG" alt="image indisponible"/>
+<?php
+$cassebrick =array(
+    'lien' => '../js/casse-brick/pong/casse%20brick.html',
+    'src'  => '../js/casse-brick/pong/images/casse_brick.PNG',
+    'alt'  => 'image indisponible',
+    'nom_jeux'=>'CASSE BRICK',
+    'description' =>'   Le principe du jeu est simple : il suffit de sauter d\'un niveau à l\'autre afin d\'atteindre le panneau FINISH.Attention
+    à ne pas tomber et a éviter tout en les crocodiles placés sur le chemin.Pour cela utiliser les touches 4,8,6 pour
+    respectivement aller à gauche,sauter et aller à droite.',
+);
+?>
+<a href="<?php echo $cassebrick['lien'] ?>" class="lien_image">
+    <img src="<?php echo $cassebrick['src'] ?>" alt="<?php echo $cassebrick['alt'] ?>"/>
 </a>
 
 <p class="description_jeux">
-    Le principe du jeu est simple : il suffit de sauter d'un niveau à l'autre afin d'atteindre le panneau FINISH.Attention
-    à ne pas tomber et a éviter tout en les crocodiles placés sur le chemin.Pour cela utiliser les touches 4,8,6 pour
-    respectivement aller à gauche,sauter et aller à droite.
+    <?php echo $cassebrick['description'] ?>
  </p>
 
-<p class="jouer"><a href="../js/casse-brick/pong/casse%20brick.html">JOUER</a></p>
+<p class="jouer"><a href="<?php echo $cassebrick['lien'] ?>">JOUER</a></p>
 
-<p class="titre_jeux">CASSE BRICK</p>
+<p class="titre_jeux"><?php echo $cassebrick['nom_jeux'] ?></p>
 
+<p>
+    <img src="../images/like.png" alt="image indisponible" id="img1" class="like" "/>
 
+    <img src="<?php echo '../images/unlike.png'?>" alt="image indisponible" id="img2" class="likes" />
+</p>
+
+<script>
+
+    document.getElementById('img1').addEventListener ('click', function() {
+        var img = document.getElementsByClassName('like')[0];
+        var img2 = document.getElementsByClassName('likes')[0];
+        console.log(img.src);
+        if (img.src == 'http://localhost/tp_php_multijeux/images/like.png') {
+            img.src = 'http://localhost/tp_php_multijeux/images/like0.png';
+            img2.src = 'http://localhost/tp_php_multijeux/images/unlike.png';
+            console.log(img.src);
+        } else if (img.src =='http://localhost/tp_php_multijeux/images/like0.png') {
+            img.src = 'http://localhost/tp_php_multijeux/images/like.png';
+        }
+    });
+
+    document.getElementById('img2').addEventListener ('click', function() {
+        img2 = document.getElementsByClassName('likes')[0];
+        img = document.getElementsByClassName('like')[0];
+        console.log(img.src);
+        if (img2.src == 'http://localhost/tp_php_multijeux/images/unlike.png') {
+            img2.src = 'http://localhost/tp_php_multijeux/images/unlike0.png';
+            img.src = 'http://localhost/tp_php_multijeux/images/like.png';
+            console.log(img2.src);
+        } else if (img2.src =='http://localhost/tp_php_multijeux/images/unlike0.png') {
+            img2.src = 'http://localhost/tp_php_multijeux/images/unlike.png';
+        }
+    });
+</script>
 <?php ?>
 </body>
 </html>

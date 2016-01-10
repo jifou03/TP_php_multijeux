@@ -24,8 +24,8 @@ if(! array_key_exists('session_like',$_SESSION)){
 
         }
         a img{
-            width:  477px;
-            height: 400px;
+            width:  137%;
+            height: 190%;
             border: 1px solid black;
         }
         .description_jeux{
@@ -48,23 +48,20 @@ if(! array_key_exists('session_like',$_SESSION)){
             bottom :60%;
 
         }
-
         .like{
-            width: 5%;
-            vertical-align: top;
-            color: red;
+            width: 50px;
+            height:50px;
             position: absolute;
             left: 42%;
-            bottom :45%;
+            bottom :32%;
 
         }
         .likes{
-             width: 5%;
-            vertical-align: top;
-            color: red;
+            width: 50px;
+            height:50px;
             position: absolute;
-            left: 52%;
-            bottom :45%;
+            left: 48%;
+            bottom :29.5%;
 
         }
 
@@ -96,7 +93,10 @@ $calculRapide =array(
     'lien' => '../js/puzzle_memoire/calcul_rapide.html',
     'src'  => '../js/puzzle_memoire/images/calcul.jpg',
     'alt'  => 'image indisponible',
-    'nom_jeux'=>'CALCUL RAPIDE'
+    'nom_jeux'=>'CALCUL RAPIDE',
+    'description' =>'La course au calcul mental est lancée. Deviens un expert du calcul mental et excelle. Trois niveau te sont proposé.
+    Tu dois résoudre correctement les équations qui te sont proposée pour augmenter tes points. Attention!! mais sois très
+    rapide car le temps est limité!',
 );
 ?>
 <a href="<?php echo $calculRapide['lien'] ?>" class="lien_image">
@@ -105,9 +105,7 @@ $calculRapide =array(
 
 
 <p class="description_jeux">
-    Le principe du jeu est simple : il suffit de sauter d'un niveau à l'autre afin d'atteindre le panneau FINISH.Attention
-    à ne pas tomber et a éviter tout en les crocodiles placés sur le chemin.Pour cela utiliser les touches 4,8,6 pour
-    respectivement aller à gauche,sauter et aller à droite.
+    <?php echo $calculRapide['description'] ?>
  </p>
 
 
@@ -116,7 +114,7 @@ $calculRapide =array(
 <p>
     <img src="../images/like.png" alt="<?php echo $calculRapide['alt'] ?>" id="img1" class="like" "/>
 
-    <img src="<?php echo '../images/unlike.jpg'?>" alt="<?php echo $calculRapide['alt'] ?>" id="img2" class="likes" />
+    <img src="<?php echo '../images/unlike.png'?>" alt="<?php echo $calculRapide['alt'] ?>" id="img2" class="likes" />
 </p>
 <p></p>
 
@@ -128,23 +126,27 @@ $calculRapide =array(
 
     document.getElementById('img1').addEventListener ('click', function() {
         var img = document.getElementsByClassName('like')[0];
+        var img2 = document.getElementsByClassName('likes')[0];
         console.log(img.src);
         if (img.src == 'http://localhost/tp_php_multijeux/images/like.png') {
-            img.src = 'http://localhost/tp_php_multijeux/images/like0.jpg';
+            img.src = 'http://localhost/tp_php_multijeux/images/like0.png';
+            img2.src = 'http://localhost/tp_php_multijeux/images/unlike.png';
             console.log(img.src);
-        } else if (img.src =='http://localhost/tp_php_multijeux/images/like0.jpg') {
+        } else if (img.src =='http://localhost/tp_php_multijeux/images/like0.png') {
             img.src = 'http://localhost/tp_php_multijeux/images/like.png';
         }
     });
 
     document.getElementById('img2').addEventListener ('click', function() {
-        var img = document.getElementsByClassName('likes')[0];
+        img2 = document.getElementsByClassName('likes')[0];
+        img = document.getElementsByClassName('like')[0];
         console.log(img.src);
-        if (img.src == 'http://localhost/tp_php_multijeux/images/unlike.jpg') {
-            img.src = 'http://localhost/tp_php_multijeux/images/unlike0.jpg';
-            console.log(img.src);
-        } else if (img.src =='http://localhost/tp_php_multijeux/images/unlike0.jpg') {
-            img.src = 'http://localhost/tp_php_multijeux/images/unlike.jpg';
+        if (img2.src == 'http://localhost/tp_php_multijeux/images/unlike.png') {
+            img2.src = 'http://localhost/tp_php_multijeux/images/unlike0.png';
+            img.src = 'http://localhost/tp_php_multijeux/images/like.png';
+            console.log(img2.src);
+        } else if (img2.src =='http://localhost/tp_php_multijeux/images/unlike0.png') {
+            img2.src = 'http://localhost/tp_php_multijeux/images/unlike.png';
         }
     });
 </script>

@@ -17,9 +17,9 @@
             margin: 3%;
 
         }
-        img{
-            width:  477px;
-            height: 400px;
+        a img{
+            width:  137%;
+            height: 190%;
             border: 1px solid black;
         }
         .description_jeux{
@@ -42,6 +42,22 @@
             bottom :50%;
 
         }
+        .like{
+            width: 50px;
+            height:50px;
+            position: absolute;
+            left: 42%;
+            bottom :32%;
+
+        }
+        .likes{
+            width: 50px;
+            height:50px;
+            position: absolute;
+            left: 48%;
+            bottom :29.5%;
+
+        }
 
 
         .titre_jeux,.titre_jeux a{
@@ -58,27 +74,69 @@
 
         }
 
-
     </style>
 </head>
 <body>
+<?php
+$mastermind =array(
+    'lien' => '../js/mastermind-iphone/iFUN/index.html',
+    'src'  => '../js/mastermind-iphone/mastermind.PNG',
+    'alt'  => 'image indisponible',
+    'nom_jeux'=>'MASTERMIND',
+    'description' => "Le principe est simple: Le but est de retrouver quels sont les 4 pions choisis par le jeu et d'en connaître les positions.
+Pour cela, le joueur doit cliquer sur les pastilles de couleurs pour former une rangée.
+Il peut à tout moment recommencer la rangée sur laquelle il se trouve en cliquant sur [effacer la ligne].
+Une fois les pastilles placées, l'utilisateur doit [soumettre] sa proposition afin que le programme la compare à la solution. Ce dernier retourne
+alors le nombre de pastilles bien placées via les petits carrés rouges, mais aussi le nombre de pastilles présentes et mal placées via les petits carrés bleus.",
+);
+?>
 
-<a href="../js/mastermind-iphone/iFUN/index.html" class="lien_image">
-    <img src="../js/mastermind-iphone/mastermind.PNG" alt="image indisponible"/>
+<a href="<?php echo $mastermind['lien'] ?>" class="lien_image">
+    <img src="<?php echo $mastermind['src'] ?>" alt="<?php echo $mastermind['alt'] ?>"/>
 </a>
 
 <p class="description_jeux">
-    Le principe du jeu est simple : il suffit de rebondir de plate-forme en plate-forme avec l'interdiction de redescendre
-    plus bas. Plus on arrive haut, plus le score augmente, et plus les choses se corsent, aussi. La maniabilité de la
-    bestiole que l'on incarne est d'une précision redoutable, ce qui fait la grande force du jeu et lui permet d'offrir
-    une grosse marge de progression.
+    <?php echo $mastermind['description'] ?>
  </p>
 
-<p class="jouer"><a href="../js/mastermind-iphone/iFUN/index.html">JOUER</a></p>
+<p class="jouer"><a href="<?php echo $mastermind['lien'] ?>">JOUER</a></p>
 
-<p class="titre_jeux">MASTERMIND</p>
+<p class="titre_jeux"><?php echo $mastermind['nom_jeux'] ?></p>
 
+<p>
+    <img src="../images/like.png" alt="image indisponible" id="img1" class="like" "/>
 
+    <img src="<?php echo '../images/unlike.png'?>" alt="image indisponible" id="img2" class="likes" />
+</p>
+
+<script>
+
+    document.getElementById('img1').addEventListener ('click', function() {
+        var img = document.getElementsByClassName('like')[0];
+        var img2 = document.getElementsByClassName('likes')[0];
+        console.log(img.src);
+        if (img.src == 'http://localhost/tp_php_multijeux/images/like.png') {
+            img.src = 'http://localhost/tp_php_multijeux/images/like0.png';
+            img2.src = 'http://localhost/tp_php_multijeux/images/unlike.png';
+            console.log(img.src);
+        } else if (img.src =='http://localhost/tp_php_multijeux/images/like0.png') {
+            img.src = 'http://localhost/tp_php_multijeux/images/like.png';
+        }
+    });
+
+    document.getElementById('img2').addEventListener ('click', function() {
+        img2 = document.getElementsByClassName('likes')[0];
+        img = document.getElementsByClassName('like')[0];
+        console.log(img.src);
+        if (img2.src == 'http://localhost/tp_php_multijeux/images/unlike.png') {
+            img2.src = 'http://localhost/tp_php_multijeux/images/unlike0.png';
+            img.src = 'http://localhost/tp_php_multijeux/images/like.png';
+            console.log(img2.src);
+        } else if (img2.src =='http://localhost/tp_php_multijeux/images/unlike0.png') {
+            img2.src = 'http://localhost/tp_php_multijeux/images/unlike.png';
+        }
+    });
+</script>
 <?php ?>
 </body>
 </html>

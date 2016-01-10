@@ -17,9 +17,9 @@
             margin: 3%;
 
         }
-        img{
-            width:  477px;
-            height: 400px;
+        a img{
+            width:  137%;
+            height: 190%;
             border: 1px solid black;
         }
         .description_jeux{
@@ -42,6 +42,22 @@
             bottom :50%;
 
         }
+        .like{
+            width: 50px;
+            height:50px;
+            position: absolute;
+            left: 42%;
+            bottom :32%;
+
+        }
+        .likes{
+            width: 50px;
+            height:50px;
+            position: absolute;
+            left: 48%;
+            bottom :29.5%;
+
+        }
 
 
         .titre_jeux,.titre_jeux a{
@@ -58,27 +74,67 @@
 
         }
 
-
     </style>
 </head>
 <body>
+<?php
+$invasion =array(
+    'lien' => '../js/invasion-extraterrestre/invasion/invasion.html',
+    'src'  => '../js/invasion-extraterrestre/invasion/res/invasion.jpg',
+    'alt'  => 'image indisponible',
+    'nom_jeux'=>'INVASION EXTRATERRESTRE',
+    'description'=>"Les extraterrestres ont envahi la terre de nouveau. Avec l'aide de cette grande machine à trois pieds, vous pouvez détruire tout ce
+qui met sur votre chemin. Vous aurez également un laser que vous pouvez utiliser. Détruisez tout ce que vous voyez dans votre chemin
+pour obtenir plus de points. Avec 4 modes différents testez votre puissance a combattre ces ennemis de la terre.Attention!!Le temps est toujours limité",
+);
+?>
 
-<a href="../js/invasion-extraterrestre/invasion/invasion.html" class="lien_image">
-    <img src="../js/invasion-extraterrestre/invasion/res/invasion.jpg" alt="image indisponible"/>
+<a href="<?php echo $invasion['lien'] ?>" class="lien_image">
+    <img src="<?php echo $invasion['src'] ?>" alt="<?php echo $invasion['alt'] ?>"/>
 </a>
 
 <p class="description_jeux">
-    Le principe du jeu est simple : il suffit de rebondir de plate-forme en plate-forme avec l'interdiction de redescendre
-    plus bas. Plus on arrive haut, plus le score augmente, et plus les choses se corsent, aussi. La maniabilité de la
-    bestiole que l'on incarne est d'une précision redoutable, ce qui fait la grande force du jeu et lui permet d'offrir
-    une grosse marge de progression.
+    <?php echo $invasion['description'];?>
  </p>
 
-<p class="jouer"><a href="../js/invasion-extraterrestre/invasion/invasion.html">JOUER</a></p>
+<p class="jouer"><a href="<?php echo $invasion['lien'] ?>">JOUER</a></p>
 
-<p class="titre_jeux">INVASION EXTRATERRESTRE</p>
+<p class="titre_jeux"><?php echo $invasion['nom_jeux'] ?></p>
 
+<p>
+    <img src="../images/like.png" alt="image indisponible" id="img1" class="like" "/>
 
+    <img src="<?php echo '../images/unlike.png'?>" alt="image indisponible" id="img2" class="likes" />
+</p>
+
+<script>
+
+    document.getElementById('img1').addEventListener ('click', function() {
+        var img = document.getElementsByClassName('like')[0];
+        var img2 = document.getElementsByClassName('likes')[0];
+        console.log(img.src);
+        if (img.src == 'http://localhost/tp_php_multijeux/images/like.png') {
+            img.src = 'http://localhost/tp_php_multijeux/images/like0.png';
+            img2.src = 'http://localhost/tp_php_multijeux/images/unlike.png';
+            console.log(img.src);
+        } else if (img.src =='http://localhost/tp_php_multijeux/images/like0.png') {
+            img.src = 'http://localhost/tp_php_multijeux/images/like.png';
+        }
+    });
+
+    document.getElementById('img2').addEventListener ('click', function() {
+        img2 = document.getElementsByClassName('likes')[0];
+        img = document.getElementsByClassName('like')[0];
+        console.log(img.src);
+        if (img2.src == 'http://localhost/tp_php_multijeux/images/unlike.png') {
+            img2.src = 'http://localhost/tp_php_multijeux/images/unlike0.png';
+            img.src = 'http://localhost/tp_php_multijeux/images/like.png';
+            console.log(img2.src);
+        } else if (img2.src =='http://localhost/tp_php_multijeux/images/unlike0.png') {
+            img2.src = 'http://localhost/tp_php_multijeux/images/unlike.png';
+        }
+    });
+</script>
 <?php ?>
 </body>
 </html>
