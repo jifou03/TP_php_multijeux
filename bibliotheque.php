@@ -14,7 +14,7 @@ require_once 'view_parts/_main_menu.php';
 <h1><?= ucfirst($site_data[PAGE_ID]); ?></h1>
 <?php $biblio = array(
                         array(
-                            'lien' => 'bibliotheque/calcul_rapide.php',
+                            'lien' => 'bibliotheque/calcul_rapide.html',
                             'src'  => 'js/puzzle_memoire/images/calcul.jpg',
                             'alt'  => 'image indisponible',
                             'nom_jeux'=>'CALCUL RAPIDE',
@@ -41,7 +41,7 @@ require_once 'view_parts/_main_menu.php';
         'nom_jeux'=>'JEUX DE MOTS FACILE'
     ),
     array(
-        'lien' => 'bibliotheque/puzzle.php',
+        'lien' => 'bibliotheque/puzzle.html',
         'src'  => 'js/puzzle_memoire/images/puzzle.PNG',
         'alt'  => 'image indisponible',
         'nom_jeux'=>'PUZZLE'
