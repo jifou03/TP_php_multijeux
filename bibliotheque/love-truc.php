@@ -10,6 +10,7 @@
     <meta charset="utf-8" />
     <style>
 
+
         .lien_image{
             width:25%;
             display: inline-block;
@@ -17,9 +18,9 @@
             margin: 3%;
 
         }
-        img{
-            width:  477px;
-            height: 400px;
+        a img{
+            width:  137%;
+            height: 190%;
             border: 1px solid black;
         }
         .description_jeux{
@@ -42,6 +43,22 @@
             bottom :50%;
 
         }
+        .like{
+            width: 50px;
+            height:50px;
+            position: absolute;
+            left: 42%;
+            bottom :32%;
+
+        }
+        .likes{
+            width: 50px;
+            height:50px;
+            position: absolute;
+            left: 48%;
+            bottom :29.5%;
+
+        }
 
 
         .titre_jeux,.titre_jeux a{
@@ -58,26 +75,65 @@
 
         }
 
-
     </style>
 </head>
 <body>
-
-<a href="../js/love-trucator/Lvcalculator%20by%20mika-------------------/love%20calc%20by%20mika.html" class="lien_image">
-    <img src="../js/love-trucator/Lvcalculator%20by%20mika-------------------/imagelv/love.PNG" alt="image indisponible"/>
+<?php
+$love =array(
+    'lien' => '../js/love-trucator/Lvcalculator%20by%20mika-------------------/love%20calc%20by%20mika.html',
+    'src'  => '../js/love-trucator/Lvcalculator%20by%20mika-------------------/imagelv/love.PNG',
+    'alt'  => 'image indisponible',
+    'nom_jeux'=>'LOVE CALCULATOR',
+    'description' => "Le principe du jeu est simple : cette calculatrice de l'amour va vous permettre de tester la compatibilité entre deux prénoms ,vous et votre chéri ou celui que vous allez charmer. Vous pouvez
+faire des tests avec les noms et prénoms, les surnoms et très rigolo vous pourrez même vous amusez à tester avec des célébrités ou des objets!!!",
+);
+?>
+<a href="<?php echo $love['lien'] ?>" class="lien_image">
+    <img src="<?php echo $love['src'] ?>" alt="<?php echo $love['alt'] ?>"/>
 </a>
 
 <p class="description_jeux">
-    Le principe du jeu est simple : il suffit de sauter d'un niveau à l'autre afin d'atteindre le panneau FINISH.Attention
-    à ne pas tomber et a éviter tout en les crocodiles placés sur le chemin.Pour cela utiliser les touches 4,8,6 pour
-    respectivement aller à gauche,sauter et aller à droite.
+    <?php echo $love['description'] ?>
  </p>
 
-<p class="jouer"><a href="../js/love-trucator/Lvcalculator%20by%20mika-------------------/love%20calc%20by%20mika.html">JOUER</a></p>
+<p class="jouer"><a href="<?php echo $love['lien'] ?>">JOUER</a></p>
 
-<p class="titre_jeux">LOVE CALCULATOR</p>
+<p class="titre_jeux"><?php echo $love['nom_jeux'] ?></p>
 
+<p>
+    <img src="../images/like.png" alt="image indisponible" id="img1" class="like" "/>
 
+    <img src="<?php echo '../images/unlike.png'?>" alt="image indisponible" id="img2" class="likes" />
+</p>
+
+<script>
+
+    document.getElementById('img1').addEventListener ('click', function() {
+        var img = document.getElementsByClassName('like')[0];
+        var img2 = document.getElementsByClassName('likes')[0];
+        console.log(img.src);
+        if (img.src == 'http://localhost/tp_php_multijeux/images/like.png') {
+            img.src = 'http://localhost/tp_php_multijeux/images/like0.png';
+            img2.src = 'http://localhost/tp_php_multijeux/images/unlike.png';
+            console.log(img.src);
+        } else if (img.src =='http://localhost/tp_php_multijeux/images/like0.png') {
+            img.src = 'http://localhost/tp_php_multijeux/images/like.png';
+        }
+    });
+
+    document.getElementById('img2').addEventListener ('click', function() {
+        img2 = document.getElementsByClassName('likes')[0];
+        img = document.getElementsByClassName('like')[0];
+        console.log(img.src);
+        if (img2.src == 'http://localhost/tp_php_multijeux/images/unlike.png') {
+            img2.src = 'http://localhost/tp_php_multijeux/images/unlike0.png';
+            img.src = 'http://localhost/tp_php_multijeux/images/like.png';
+            console.log(img2.src);
+        } else if (img2.src =='http://localhost/tp_php_multijeux/images/unlike0.png') {
+            img2.src = 'http://localhost/tp_php_multijeux/images/unlike.png';
+        }
+    });
+</script>
 <?php ?>
 </body>
 </html>

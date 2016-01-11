@@ -17,9 +17,9 @@
             margin: 3%;
 
         }
-        img{
-            width:  477px;
-            height: 400px;
+        a img{
+            width:  137%;
+            height: 190%;
             border: 1px solid black;
         }
         .description_jeux{
@@ -40,6 +40,22 @@
             position: absolute;
             left: 50%;
             bottom :50%;
+
+        }
+        .like{
+            width: 50px;
+            height:50px;
+            position: absolute;
+            left: 42%;
+            bottom :32%;
+
+        }
+        .likes{
+            width: 50px;
+            height:50px;
+            position: absolute;
+            left: 48%;
+            bottom :29.5%;
 
         }
 
