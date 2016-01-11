@@ -14,7 +14,7 @@ require_once 'view_parts/_main_menu.php';
 <h1><?= ucfirst($site_data[PAGE_ID]); ?></h1>
 <?php $biblio = array(
                         array(
-                            'lien' => 'bibliotheque/calcul_rapide.html',
+                            'lien' => 'bibliotheque/calcul_rapide.php',
                             'src'  => 'js/puzzle_memoire/images/calcul.jpg',
                             'alt'  => 'image indisponible',
                             'nom_jeux'=>'CALCUL RAPIDE',
@@ -41,7 +41,7 @@ require_once 'view_parts/_main_menu.php';
         'nom_jeux'=>'JEUX DE MOTS FACILE'
     ),
     array(
-        'lien' => 'bibliotheque/puzzle.html',
+        'lien' => 'bibliotheque/puzzle.php',
         'src'  => 'js/puzzle_memoire/images/puzzle.PNG',
         'alt'  => 'image indisponible',
         'nom_jeux'=>'PUZZLE'
@@ -94,8 +94,8 @@ require_once 'view_parts/_main_menu.php';
 <?php
 
 foreach($biblio as $key => $val){ ?>
-    <p class="biblio"><a href=\"<?php echo $biblio[$key]['lien'] ?>\"><img src="<?php echo $biblio[$key]['src'] ?>" alt="<?php echo $biblio[$key]['alt'] ?>"/>
-        <?php echo $biblio[$key]['nom_jeux'] ?></a></p>;
+    <p class="biblio"><a href="<?php echo $biblio[$key]['lien'] ?>"><img src="<?php echo $biblio[$key]['src'] ?>" alt="<?php echo $biblio[$key]['alt'] ?>"/>
+        <?php echo $biblio[$key]['nom_jeux'] ?></a></p>
 <?php }
 
 ?>
