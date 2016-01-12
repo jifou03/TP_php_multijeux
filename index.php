@@ -18,7 +18,7 @@ require_once 'view_parts/_main_menu.php';
     } else {echo "<p>Si vous etes un nouveau visiteur de ce site de jeux,<br/> clique sur
         le bouton ci-dessous afin de vous inscrire.</p>
         <a href='inscription.php'><input type='button' value='inscrivez-vous ici' ></a>
-        <P>Si vous est déja inscrit cliquez sur le bouton suivant pour vous connecter</P>
+        <p>Si vous est déja inscrit cliquez sur le bouton suivant pour vous connecter</p>
         <a href='connection.php'><input type='button' value='connectez-vous ici' ></a>";
     }?>
 </div>
