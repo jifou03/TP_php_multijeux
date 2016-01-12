@@ -4,7 +4,7 @@ $menu_data = array (
     'Inscription' => 'inscription.php',
     'connection' => 'connection.php',
     'Bibliotheque' =>'bibliotheque.php',
-    'Modifier mot de passe' => 'modifier_mdp',
+    'Modifier mot de passe' => 'modifier_mdp.php',
     'Deconnexion' => 'deconnexion.php'
 );
 ?>
