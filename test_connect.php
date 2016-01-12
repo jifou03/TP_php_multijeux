@@ -15,7 +15,7 @@
                 session_name("h8278");
                 session_start();
                 $_SESSION['pseudo'] = $_POST['username'];
-                header('Location: http://http://multijeuxphp.projetisi.com/index.php');
+                header('Location: http://multijeuxphp.projetisi.com/index.php');
             } else {
                 header('Location: http://multijeuxphp.projetisi.com/connection.php?error=1');
             }
