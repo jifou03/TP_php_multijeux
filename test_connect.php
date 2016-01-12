@@ -1,10 +1,10 @@
 <?php
-echo 'je suis connecter';
+echo '<p>je suis connecter</p>';
 $link = mysqli_connect("localhost", "multijeux", "multijeux") or die("Couldn't connect wtf");
 mysqli_select_db($link, 'p62a15tpinda_multijeuxdb') or die ("Couldn't connect AGAIN");
 
 
-//$username = $_POST['username'];
+$username = $_POST['username'];
 
 $query = "SELECT * FROM users WHERE username = '$username'";
 $result = mysqli_query($link, $query);
