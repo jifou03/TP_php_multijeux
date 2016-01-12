@@ -20,7 +20,7 @@ if (array_key_exists('password', $_POST)) {
 
 if ($password_ok) {
 
-    $link = mysqli_connect("localhost", "root", "") or die("Couldn't connect.");
+    $link = mysqli_connect("localhost", "p62a15tpinda_multijeuxdb","multijeuxphp", "multijeuxphp") or die("Couldn't connect.");
 
     mysqli_select_db($link, 'multijeux') or die ("Couldn't connect AGAIN!");
 
@@ -29,7 +29,7 @@ if ($password_ok) {
     $query = "UPDATE users SET password='$password' WHERE username='$pseudo'";
     mysqli_query($link, $query);
 
-    header('Location: http://localhost/tp_php_multijeux/index.php');
+    header('Location: http://multijeuxphp.projetisi.com/index.php');
 
     exit;
 }

@@ -1,5 +1,5 @@
 <?php
-    $link = mysqli_connect("localhost", "root", "") or die("Couldn't connect wtf");
+    $link = mysqli_connect("localhost", "p62a15tpinda_multijeuxdb","multijeuxphp", "multijeuxphp") or die("Couldn't connect wtf");
     mysqli_select_db($link, 'multijeux') or die ("Couldn't connect AGAIN");
 
     $username = $_POST['username'];
