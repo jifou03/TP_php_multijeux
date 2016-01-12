@@ -20,7 +20,7 @@ if (array_key_exists('password', $_POST)) {
 
 if ($password_ok) {
 
-    $link = mysqli_connect("localhost", "p62a15tpinda_multijeuxdb","multijeuxphp", "multijeuxphp") or die("Couldn't connect.");
+    $link = mysqli_connect("localhost", "p62a15tpinda_multijeuxdb","multijeux", "multijeux") or die("Couldn't connect.");
 
     mysqli_select_db($link, 'multijeux') or die ("Couldn't connect AGAIN!");
 
