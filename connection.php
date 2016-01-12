@@ -26,10 +26,10 @@ require_once 'view_parts/_main_menu.php';
 <?php
 require_once 'view_parts/_page_bottom.php';
  if (isset($_GET['error'])) {
-     if ($_GET['error'] == 1) {
+     if ($_GET['error'] == true) {
          echo "Le nom d'utilisateur et/ou le mot de passe n'est pas valide.";
          header('Location:connection.php');
-     } else if ($_GET['error'] != 1){
+     } else if ($_GET['error'] != true){
          header('Location: connection.php');
      }
  }
