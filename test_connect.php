@@ -15,14 +15,14 @@
                 session_name("h8278");
                 session_start();
                 $_SESSION['pseudo'] = $_POST['username'];
-                header('Location: http://multijeuxphp.projetisi.com/index.php');
+                header('Location: http://www.multijeuxphp.projetisi.com/index.php');
             } else {
-                header('Location: http://multijeuxphp.projetisi.com/connection.php?error=1');
+                header('Location: http://www.multijeuxphp.projetisi.com/connection.php?error=1');
             }
         } else {
-            header('Location: http://multijeuxphp.projetisi.com/connection.php?error=1');
+            header('Location: http://www.multijeuxphp.projetisi.com/connection.php?error=1');
         }
     } else {
-        header('Location: http://multijeuxphp.projetisi.com/connection.php?error=1');
+        header('Location: http://www.multijeuxphp.projetisi.com/connection.php?error=1');
     }
 ?>
