@@ -79,7 +79,7 @@ require_once 'view_parts/_header.php';
 require_once 'view_parts/_main_menu.php';
 ?>
 
-<h1><?= ucfirst($site_data[PAGE_ID]); ?></h1>
+<h1><?php echo ucfirst($site_data[PAGE_ID]); ?></h1>
     <form method="post" action="">
         <ul id="nonestyle">
             <li><label class="inscription" for="nom">Nom :</label>

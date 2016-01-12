@@ -39,7 +39,7 @@ require_once 'view_parts/_header.php';
 require_once 'view_parts/_main_menu.php';
 ?>
 
-<h1><?= ucfirst($site_data[PAGE_ID]); ?></h1>
+<h1><?php echo ucfirst($site_data[PAGE_ID]); ?></h1>
 <?php
 if ($_SESSION['pseudo'] != null) {
     echo "Bonjour " . $pseudo . ". Veuillez modifier votre mot de passe.";
