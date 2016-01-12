@@ -70,7 +70,7 @@ if ($nom_ok && $prenom_ok && $password_ok && $courriel_ok && $pseudo_ok && $gend
 
     mysqli_query($link, $query);
 
-    header('Location: http://localhost/tp_php_multijeux/index.php');
+    header('Location: http://multijeuxphp.projetisi.com/index.php');
     exit;
 }
 

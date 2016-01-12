@@ -4,7 +4,7 @@ $site_data[PAGE_ID] = 'connection';
 session_name("h8278");
 session_start();
 if ((isset($_SESSION['pseudo']))) {
-    header('Location: http://localhost/tp_php_multijeux/index.php');
+    header('Location: http://multijeuxphp.projetisi.com/index.php');
 }
 require_once 'view_parts/_page_base.php';
 require_once 'view_parts/_header.php';

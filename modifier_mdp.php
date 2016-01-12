@@ -4,7 +4,7 @@ $site_data[PAGE_ID] = 'modifier mot de passe';
 session_name("h8278");
 session_start();
 if ($_SESSION['pseudo'] == null) {
-    header('Location: http://localhost/tp_php_multijeux/index.php');
+    header('Location: http://multijeuxphp.projetisi.com/index.php');
 }
 
 $pseudo = $_SESSION['pseudo'];
