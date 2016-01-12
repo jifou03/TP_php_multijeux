@@ -2,6 +2,6 @@
     session_name("h8278");
     session_start();
     unset($_SESSION['pseudo']);
-    header('Location: http://multijeuxphp.projetisi.com/index.php');
+    header('Location: http://localhost/tp_php_multijeux/index.php');
 ?>
 
