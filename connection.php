@@ -1,11 +1,7 @@
 <?php
 require_once '_defines.php';
 $site_data[PAGE_ID] = 'connection';
-session_name("h8278");
-session_start();
-if ((isset($_SESSION['pseudo']))) {
-    header('Location: http://multijeuxphp.projetisi.com/index.php');
-}
+
 $in_post = ('POST' == $_SERVER['REQUEST_METHOD']);
 
 $link = mysqli_connect("localhost","multijeux","multijeux") or die("Couldn't connect wtf");
@@ -33,7 +29,11 @@ if (array_key_exists('password', $_POST) AND array_key_exists('username', $_POST
 header('Location: http://multijeuxphp.projetisi.com/index.php');
 exit;
 
-
+session_name("h8278");
+session_start();
+if ((isset($_SESSION['pseudo']))) {
+    header('Location: http://multijeuxphp.projetisi.com/index.php');
+}
 require_once 'view_parts/_page_base.php';
 require_once 'view_parts/_header.php';
 require_once 'view_parts/_main_menu.php';
