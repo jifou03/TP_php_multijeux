@@ -7,10 +7,10 @@
     $query = "SELECT * FROM users WHERE username = '$username'";
     $result = mysqli_query($link, $query);
     $get_user_info = mysqli_fetch_array($result);
-    //var_dump($get_user_info);
+    var_dump($get_user_info);
 
-    if (array_key_exists('password', $_POST) && array_key_exists('username', $_POST)) {
-        if ( ! empty($_POST['password'] && ! empty($_POST['username'])) ){
+    if (array_key_exists('password', $_POST) AND array_key_exists('username', $_POST)) {
+        if ( ! empty($_POST['password'] AND ! empty($_POST['username'])) ){
             if ($_POST['username'] == $get_user_info['username'] AND sha1($_POST['password']) == $get_user_info['password']) {
                 session_name("h8278");
                 session_start();
