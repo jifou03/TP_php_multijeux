@@ -51,8 +51,6 @@ require_once 'view_parts/_main_menu.php';
     <p><input type="submit" id="submit" name="submit" value="Soumettre"/></p>
 </form>
     <?php
-    require_once 'view_parts/_page_bottom.php';
-
 
     if (isset($_GET['error'])) {
         if ($_GET['error'] == 1) {
