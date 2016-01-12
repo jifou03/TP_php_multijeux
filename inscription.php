@@ -63,7 +63,7 @@ if ($nom_ok && $prenom_ok && $password_ok && $courriel_ok && $pseudo_ok && $gend
 
     $link = mysqli_connect("localhost", "p62a15tpinda_multijeuxdb","multijeux", "multijeux") or die("Couldn't connect wtf");
 
-    mysqli_select_db($link, 'multijeux') or die ("Couldn't connect AGAIN");
+    mysqli_select_db($link, 'p62a15tpinda_multijeuxdb') or die ("Couldn't connect AGAIN");
 
     $query = "INSERT INTO users (username, password, prenom, nom, courriel, sexe)
     VALUES ('$nomutilisateur', '$password', '$prenom', '$nom', '$courriel', '$sexe')";

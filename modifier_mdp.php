@@ -22,7 +22,7 @@ if ($password_ok) {
 
     $link = mysqli_connect("localhost", "p62a15tpinda_multijeuxdb","multijeux", "multijeux") or die("Couldn't connect.");
 
-    mysqli_select_db($link, 'multijeux') or die ("Couldn't connect AGAIN!");
+    mysqli_select_db($link, 'p62a15tpinda_multijeuxdb') or die ("Couldn't connect AGAIN!");
 
     $password = sha1($password);
 
