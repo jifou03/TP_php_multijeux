@@ -1,8 +1,8 @@
 <?php
 $menu_data = array (
     'Accueil' => 'index.php',
-    'jeux' => 'contact.php',
     'Inscription' => 'inscription.php',
+    'connection' => 'connection.php',
     'Bibliotheque' =>'bibliotheque.php',
     'Modifier mot de passe' => 'modifier_mdp',
     'Deconnexion' => 'deconnexion.php'

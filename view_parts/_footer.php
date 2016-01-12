@@ -1,3 +1,3 @@
 <div id="footer">
-    <p>Pied de page</p>
+    <p>&copy;Multijeux 2016</p>
 </div>
