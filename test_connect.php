@@ -17,12 +17,12 @@
                 $_SESSION['pseudo'] = $_POST['username'];
                 header('Location: http://www.multijeuxphp.projetisi.com/index.php');
             } else {
-                header('Location: http://www.multijeuxphp.projetisi.com/connection.php?error=1');
+                header('Location: http://www.multijeuxphp.projetisi.com/connection.php');
             }
         } else {
-            header('Location: http://www.multijeuxphp.projetisi.com/connection.php?error=1');
+            header('Location: http://www.multijeuxphp.projetisi.com/connection.php');
         }
     } else {
-        header('Location: http://www.multijeuxphp.projetisi.com/connection.php?error=1');
+        header('Location: http://www.multijeuxphp.projetisi.com/connection.php');
     }
 ?>
