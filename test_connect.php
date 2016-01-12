@@ -4,7 +4,7 @@
 
     $username = $_POST['username'];
 
-    $query = "SELECT * FROM users WHERE username = '$username'";
+    $query = "SELECT * FROM 'users' WHERE 'username' = '$username'";
     $result = mysqli_query($link, $query);
     $get_user_info = mysqli_fetch_array($result);
     var_dump($get_user_info);
