@@ -28,9 +28,6 @@ require_once 'view_parts/_page_bottom.php';
  if (isset($_GET['error'])) {
      if ($_GET['error'] == 1) {
          echo "Le nom d'utilisateur et/ou le mot de passe n'est pas valide.";
-         header('Location test_validation.php');
-     } else if ($_GET['error'] != 1){
-         header('Location test_validation.php');
      }
  }
 
