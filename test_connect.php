@@ -15,14 +15,14 @@ if (array_key_exists('password', $_POST) AND array_key_exists('username', $_POST
             session_name("h8278");
             session_start();
             $_SESSION['pseudo'] = $_POST['username'];
-            header('Location: http://localhost/tp_php_multijeux/index.php');
+            header('Location: http://multijeuxphp.projetisi.com/connection.php/index.php');
         } else {
-            header('Location: http://localhost/tp_php_multijeux/connection.php?error=1');
+            header('Location: http://multijeuxphp.projetisi.com/connection.php?error=1');
         }
     } else {
-        header('Location: http://localhost/tp_php_multijeux/connection.php?error=1');
+        header('Location: http://multijeuxphp.projetisi.com/connection.php?error=1');
     }
 } else {
-    header('Location: http://localhost/tp_php_multijeux/connection.php?error=1');
+    header('Location: http://multijeuxphp.projetisi.com/connection.php?error=1');
 }
 ?>
