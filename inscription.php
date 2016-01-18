@@ -61,16 +61,16 @@ if ($nom_ok && $prenom_ok && $password_ok && $courriel_ok && $pseudo_ok && $gend
     $courriel = $_POST['courriel'];
     $sexe = $_POST['gender'];
 
-    $link = mysqli_connect("localhost","multijeux","multijeux") or die("Couldn't connect wtf");
+    $link = mysqli_connect("localhost", "root","") or die("Couldn't connect wtf");
 
-    mysqli_select_db($link, 'p62a15tpinda_multijeuxdb') or die ("Couldn't connect AGAIN");
+    mysqli_select_db($link, 'multijeux') or die ("Couldn't connect AGAIN");
 
     $query = "INSERT INTO users (username, password, prenom, nom, courriel, sexe)
     VALUES ('$nomutilisateur', '$password', '$prenom', '$nom', '$courriel', '$sexe')";
 
     mysqli_query($link, $query);
 
-    header('Location: http://multijeuxphp.projetisi.com/index.php');
+    header('Location: http://localhost/tp_php_multijeux/index.php');
     exit;
 }
 
@@ -79,7 +79,7 @@ require_once 'view_parts/_header.php';
 require_once 'view_parts/_main_menu.php';
 ?>
 
-<h1><?php echo ucfirst($site_data[PAGE_ID]); ?></h1>
+<h1><?= ucfirst($site_data[PAGE_ID]); ?></h1>
     <form method="post" action="">
         <ul id="nonestyle">
             <li><label class="inscription" for="nom">Nom :</label>

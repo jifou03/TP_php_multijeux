@@ -1,10 +1,45 @@
 <?php
-define('LIKE_ID','like_id');
-define('SESS_LIKE','sess_like');
+/*define('LIKE_ID','like_id');
+define('SESS_LIKE','sess_like');*/
 session_start();
 
-if(! array_key_exists('session_like',$_SESSION)){
-    $_SESSION['like']= array();
+$thumb_is_up = false;
+if(! array_key_exists('thumb',$_SESSION)){
+    $_SESSION['thumb']= false;
+}
+if(array_key_exists('thumb',$_GET)){
+
+
+    if($_GET['thumb'] == 'up'){
+        $_SESSION['thumb']= true;
+        $thumb_is_up = true;
+    }else if($_GET['thumb'] == 'down'){
+        $_SESSION['thumb']= false;
+        $thumb_is_up = false;
+
+    }
+} else{
+    $thumb_is_up = $_SESSION['thumb'];
+
+}
+$thumb_is_down = false;
+if(! array_key_exists('thumb',$_SESSION)){
+    $_SESSION['thumb']= false;
+}
+if(array_key_exists('thumb',$_GET)){
+
+
+    if($_GET['thumb'] == 'down'){
+        $_SESSION['thumb']= true;
+        $thumb_is_down = true;
+    }else if($_GET['thumb'] == 'up'){
+        $_SESSION['thumb']= false;
+        $thumb_is_down = false;
+
+    }
+} else{
+    $thumb_is_down = $_SESSION['thumb'];
+
 }
 
 
@@ -23,7 +58,7 @@ if(! array_key_exists('session_like',$_SESSION)){
             margin: 3%;
 
         }
-        a img{
+        .imgcontour{
             width:  137%;
             height: 190%;
             border: 1px solid black;
@@ -80,7 +115,12 @@ if(! array_key_exists('session_like',$_SESSION)){
 
         }
 
+        .retour{
+            position: absolute;
+            left: 45%;
+            bottom :9.5%;
 
+        }
     </style>
 </head>
 <body>
@@ -100,7 +140,7 @@ $calculRapide =array(
 );
 ?>
 <a href="<?php echo $calculRapide['lien'] ?>" class="lien_image">
-    <img src="<?php echo $calculRapide['src'] ?>" alt="<?php echo $calculRapide['alt'] ?>"/>
+    <img src="<?php echo $calculRapide['src'] ?>" alt="<?php echo $calculRapide['alt'] ?>" class="imgcontour" />
 </a>
 
 
@@ -112,43 +152,19 @@ $calculRapide =array(
 <p class="jouer"><a href="<?php echo $calculRapide['lien'] ?>">JOUER</a></p>
 
 <p>
-    <img src="../images/like.png" alt="<?php echo $calculRapide['alt'] ?>" id="img1" class="like" "/>
 
-    <img src="<?php echo '../images/unlike.png'?>" alt="<?php echo $calculRapide['alt'] ?>" id="img2" class="likes" />
+    <a href="calcul_rapide.php?thumb=up"><img src=" ../images/<?php echo $thumb_is_up? 'like0.png' : 'like.png'?>"
+    alt="<?php echo $calculRapide['alt'] ?>" id="img1" class="like" "/></a>
+
+    <a href="calcul_rapide.php?thumb=down"><img src="../images/<?php echo $thumb_is_down? 'unlike0.png' : 'unlike.png'?>"
+    alt="<?php echo $calculRapide['alt'] ?>" id="img2" class="likes" /></a>
 </p>
 <p></p>
 
 <?php  ?>
 <p class="titre_jeux"><?php echo $calculRapide['nom_jeux'] ?></p>
+<p><a href="../bibliotheque.php" class="retour">Retour vers la bibliotheque</a></p>
 
 
-<script>
-
-    document.getElementById('img1').addEventListener ('click', function() {
-        var img = document.getElementsByClassName('like')[0];
-        var img2 = document.getElementsByClassName('likes')[0];
-        console.log(img.src);
-        if (img.src == 'http://localhost/tp_php_multijeux/images/like.png') {
-            img.src = 'http://localhost/tp_php_multijeux/images/like0.png';
-            img2.src = 'http://localhost/tp_php_multijeux/images/unlike.png';
-            console.log(img.src);
-        } else if (img.src =='http://localhost/tp_php_multijeux/images/like0.png') {
-            img.src = 'http://localhost/tp_php_multijeux/images/like.png';
-        }
-    });
-
-    document.getElementById('img2').addEventListener ('click', function() {
-        img2 = document.getElementsByClassName('likes')[0];
-        img = document.getElementsByClassName('like')[0];
-        console.log(img.src);
-        if (img2.src == 'http://localhost/tp_php_multijeux/images/unlike.png') {
-            img2.src = 'http://localhost/tp_php_multijeux/images/unlike0.png';
-            img.src = 'http://localhost/tp_php_multijeux/images/like.png';
-            console.log(img2.src);
-        } else if (img2.src =='http://localhost/tp_php_multijeux/images/unlike0.png') {
-            img2.src = 'http://localhost/tp_php_multijeux/images/unlike.png';
-        }
-    });
-</script>
 </body>
 </html>
